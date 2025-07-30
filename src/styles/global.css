@@ -1,0 +1,59 @@
+/* Import Tailwind CSS */
+@import "tailwindcss";
+/* Import component styles */
+
+@import "./animations.css";
+@import "./buttons.css";
+@import "./faq.css";
+
+/* Base styles */
+@layer base {  
+    * {    
+        margin: 0;    
+        padding: 0;    
+        box-sizing: border-box;  
+    }    
+    html {    
+        scroll-behavior: smooth;    
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;  
+    }    
+    body {    
+        line-height: 1.6;    
+        color: #374151;    
+        background-color: #ffffff;    
+        -webkit-font-smoothing: antialiased;    
+        -moz-osx-font-smoothing: grayscale;  
+    }
+}
+
+/* Utility classes */
+@layer utilities {
+    .container-custom {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+    }
+
+    .section-padding {
+        padding: 80px 0;
+    }
+
+    .section-padding-sm {
+        padding: 60px 0;
+    }
+
+    /* Responsive utilities */
+    @media (max-width: 768px) {
+        .container-custom {
+            padding: 0 16px;
+        }
+
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        .section-padding-sm {
+            padding: 40px 0;
+        }
+    }
+}

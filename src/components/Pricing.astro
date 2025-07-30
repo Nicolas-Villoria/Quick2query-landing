@@ -1,0 +1,93 @@
+---
+// Pricing section component
+const plans = [
+  {
+    name: "Starter",
+    description: "Perfect for small departments",
+    price: 29,
+    features: [
+      "Up to 25 staff members",
+      "Basic scheduling",
+      "Holiday planning",
+      "Email support"
+    ],
+    buttonText: "Start Free Trial",
+    buttonClass: "bg-gray-900 text-white hover:bg-gray-800",
+    popular: false
+  },
+  {
+    name: "Professional",
+    description: "Ideal for medium departments",
+    price: 79,
+    features: [
+      "Up to 100 staff members",
+      "Advanced scheduling & AI",
+      "Compliance reporting",
+      "Priority support",
+      "API access"
+    ],
+    buttonText: "Start Free Trial",
+    buttonClass: "bg-blue-600 text-white hover:bg-blue-700",
+    popular: true
+  },
+  {
+    name: "Enterprise",
+    description: "For large hospital systems",
+    price: 199,
+    features: [
+      "Unlimited staff members",
+      "Multi-department support",
+      "Custom integrations",
+      "Dedicated support",
+      "SLA guarantee"
+    ],
+    buttonText: "Contact Sales",
+    buttonClass: "bg-gray-900 text-white hover:bg-gray-800",
+    popular: false
+  }
+];
+---
+
+<section id="pricing" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Choose the plan that fits your department's size and needs. All plans include 24/7 support.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      {plans.map((plan) => (
+        <div class={`bg-white rounded-2xl shadow-lg p-8 border ${plan.popular ? 'border-2 border-blue-500 relative' : 'border-gray-200'}`}>
+          {plan.popular && (
+            <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+              <span class="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+            </div>
+          )}
+          <div class="text-center">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+            <p class="text-gray-600 mb-6">{plan.description}</p>
+            <div class="mb-6">
+              <span class="text-4xl font-bold text-gray-900">${plan.price}</span>
+              <span class="text-gray-600">/month</span>
+            </div>
+            <ul class="text-left space-y-3 mb-8">
+              {plan.features.map((feature) => (
+                <li class="flex items-center">
+                  <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+            <button class={`w-full py-3 px-6 rounded-lg transition-colors ${plan.buttonClass}`}>
+              {plan.buttonText}
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,22 +1,94 @@
-<!doctype html>
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Reliable scheduling for medical departments, done with precision." } = Astro.props;
+---
+
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+    
+    <script>
+      // FAQ Toggle Functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+          const question = item.querySelector('.faq-question');
+          const answer = item.querySelector('.faq-answer');
+          const icon = item.querySelector('.faq-icon');
+          
+          if (question && answer && icon) {
+            question.addEventListener('click', () => {
+              const isOpen = answer.classList.contains('show');
+              
+              // Close all other FAQ items
+              faqItems.forEach(otherItem => {
+                const otherAnswer = otherItem.querySelector('.faq-answer');
+                const otherIcon = otherItem.querySelector('.faq-icon');
+                if (otherAnswer && otherIcon) {
+                  otherAnswer.classList.remove('show');
+                  otherAnswer.classList.add('hidden');
+                  otherIcon.classList.remove('rotate');
+                }
+              });
+              
+              // Toggle current item
+              if (!isOpen) {
+                answer.classList.remove('hidden');
+                answer.classList.add('show');
+                icon.classList.add('rotate');
+              }
+            });
+          }
+        });
+
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+          });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(element => {
+          element.addEventListener('click', function (e: Event) {
+            e.preventDefault();
+            const target = e.currentTarget as HTMLAnchorElement;
+            const targetId = target.getAttribute('href')?.substring(1);
+            const targetElement = document.getElementById(targetId || '');
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+              // Close mobile menu if open
+              if (mobileMenu) {
+                mobileMenu.classList.add('hidden');
+              }
+            }
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+<style is:global>
+  @import "../styles/global.css";
 </style>

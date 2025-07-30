@@ -1,0 +1,56 @@
+---
+// FAQ section component
+const faqs = [
+  {
+    question: "How does Schedulink ensure fair scheduling?",
+    answer: "Schedulink uses advanced algorithms that consider multiple factors including staff preferences, previous assignments, availability, and workload distribution. The system tracks historical data to ensure no one is consistently assigned undesirable shifts, promoting fairness and transparency across your department."
+  },
+  {
+    question: "Is Schedulink HIPAA compliant?",
+    answer: "Yes, Schedulink is fully HIPAA compliant. We implement enterprise-grade security measures including end-to-end encryption, secure data centers, regular security audits, and comprehensive access controls. All staff data is protected according to the highest healthcare industry standards."
+  },
+  {
+    question: "How quickly can we implement Schedulink?",
+    answer: "Most departments are up and running within a week. Our implementation team works closely with you to import existing schedules, configure department-specific rules, and train your staff. We provide comprehensive onboarding support to ensure a smooth transition."
+  },
+  {
+    question: "Can Schedulink integrate with our existing systems?",
+    answer: "Yes, Schedulink offers robust API integration capabilities and works with most major hospital information systems, payroll systems, and HR platforms. Our Professional and Enterprise plans include custom integration support to seamlessly connect with your existing workflow."
+  },
+  {
+    question: "What kind of support do you provide?",
+    answer: "We provide 24/7 support for all plans because we understand that medical departments never sleep. Our support team includes healthcare scheduling experts who understand your unique challenges. Enterprise customers get dedicated account managers and priority response times."
+  },
+  {
+    question: "Is there a free trial available?",
+    answer: "Yes, we offer a 30-day free trial for all plans with no credit card required. This gives you full access to all features so you can see firsthand how MedSync can transform your department's scheduling process. Our team is available to help you get the most out of your trial."
+  }
+];
+---
+
+<section id="faq" class="section-padding bg-white">
+  <div class="container-custom">
+    <div class="text-center mb-20">
+      <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Get answers to common questions about Schedulink and how it can transform your department.
+      </p>
+    </div>
+    
+    <div class="max-w-4xl mx-auto space-y-4">
+      {faqs.map((faq, index) => (
+        <div class="faq-item bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+          <button class="faq-question w-full text-left">
+            <span class="text-xl font-bold text-gray-900">{faq.question}</span>
+            <svg class="faq-icon w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="faq-answer hidden">
+            <p class="text-gray-600 leading-relaxed text-lg">{faq.answer}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
