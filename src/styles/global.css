@@ -42,6 +42,13 @@
         padding: 60px 0;
     }
 
+    /* Dotted background pattern */
+    .dotted-bg {
+        background-image: radial-gradient(circle, #d1d5db 1px, transparent 1px);
+        background-size: 24px 24px;
+        background-position: 0 0;
+    }
+
     /* Responsive utilities */
     @media (max-width: 768px) {
         .container-custom {
@@ -56,4 +63,64 @@
             padding: 40px 0;
         }
     }
+}
+
+.heart-rate {
+  width: 400px;
+  height: 146px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.heart-rate svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.fade-in {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(249, 250, 251, 0.95) 0%, rgba(249, 250, 251, 0.95) 100%);
+  top: 0;
+  right: 0;
+  z-index: 2;
+  animation: heartRateIn 3s ease-in-out infinite;
+}
+
+.fade-out {
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  top: 0;
+  left: -120%;
+  z-index: 3;
+  animation: heartRateOut 3s ease-in-out infinite;
+  background: linear-gradient(to right, rgba(249, 250, 251, 0.95) 0%, rgba(249, 250, 251, 0.95) 60%, rgba(249, 250, 251, 0) 100%);
+}
+
+@keyframes heartRateIn {
+  0% {
+    width: 100%;
+  }
+  40% {
+    width: 0%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+ 
+@keyframes heartRateOut {
+  0% {
+    left: -120%;
+  }
+  40% {
+    left: -120%;
+  }
+  100% {
+    left: 0%;
+  }
 }
