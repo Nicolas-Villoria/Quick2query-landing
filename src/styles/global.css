@@ -1,7 +1,9 @@
 /* Import Tailwind CSS */
-@import "tailwindcss";
-/* Import component styles */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
+/* Import component styles */
 @import "./animations.css";
 @import "./buttons.css";
 @import "./faq.css";
