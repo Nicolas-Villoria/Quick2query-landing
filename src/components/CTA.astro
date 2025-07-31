@@ -2,29 +2,31 @@
 // Call to Action section component
 ---
 
-<section id="contact" class="section-padding bg-gradient-to-r from-blue-600 via-purple-700 to-red-600">
+<section id="contact" class="relative isolate section-padding bg-white">
+  <div class="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl" aria-hidden="true">
+    <div class="mx-auto aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+  </div>
   <div class="container-custom text-center">
-    <h2 class="text-4xl lg:text-6xl font-bold text-white mb-8">Ready to Transform Your Scheduling?</h2>
-    <p class="text-xl lg:text-2xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-      Join hundreds of medical departments who have already streamlined their operations with Schedulink.
-    </p>
-    <div class="flex flex-col lg:flex-row gap-6 justify-center items-center">
-      <a href="#pricing" class="pill-button white-pill">
-        <span class="pill-content">
+    <!-- Framed CTA Content -->
+    <div class="max-w-6xl mx-auto bg-white/90 backdrop-blur-sm rounded-3xl ring-1 ring-gray-900/10 shadow-xl p-12 lg:p-16">
+      <h2 class="text-4xl lg:text-7xl font-bold text-gray-900 mb-8">Ready to Transform Your Scheduling?</h2>
+      <p class="text-xl lg:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+        Join hundreds of medical departments who have already streamlined their operations with Schedulink.
+      </p>
+      <div class="flex flex-col lg:flex-row gap-6 justify-center items-center">
+        <a href="#pricing" class="px-8 py-4 rounded-2xl transition-colors font-semibold bg-gray-800 text-white hover:bg-white hover:text-gray-800 shadow-lg border border-gray-800 hover:shadow-xl text-lg inline-flex items-center">
           <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
           </svg>
           Start Your Free Trial
-        </span>
-      </a>
-      <a href="#contact" class="pill-button transparent-pill">
-        <span class="pill-content">
+        </a>
+        <a href="#contact" class="px-8 py-4 rounded-2xl transition-colors font-semibold bg-white text-gray-800 hover:bg-gray-800 shadow hover:shadow-lg hover:text-white border border-gray-300 hover:border-gray-800 text-lg inline-flex items-center">
           <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
           </svg>
           Schedule a Demo
-        </span>
-      </a>
+        </a>
+      </div>
     </div>
   </div>
 </section>

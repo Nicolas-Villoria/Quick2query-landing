@@ -48,11 +48,12 @@
     box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
   }
 
-  .white-pill {
-    background: white;
+  .gray-pill {
+    background: #212529;
     color: #1f2937;
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
-  }
+  } 
+
 
   .white-pill:hover {
     transform: translateY(-2px);
