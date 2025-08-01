@@ -3,33 +3,19 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CTA from '../components/CTA.astro';
+import HeroSection from '../components/HeroSection.jsx';
 ---
 
 <Layout title="Schedulink - Features">
   <Header />
   <main>
     <!-- Hero Section -->
-    <section class="relative overflow-hidden bg-gradient-to-b from-blue-50 to-white pt-32 pb-20">
-      <div class="absolute inset-0 z-0 opacity-30">
-        <div class="absolute inset-0 bg-grid-pattern"></div>
-      </div>
-      
-      <div class="container mx-auto px-4 relative z-10">
-        <div class="text-center max-w-3xl mx-auto">
-          <h1 class="text-4xl lg:text-5xl font-bold mb-6 text-gray-900 animate-slide-down">
-            Powerful Features for <span class="text-blue-600">Medical Scheduling</span>
-          </h1>
-          <p class="text-xl text-gray-600 mb-8 animate-slide-up" style="animation-delay: 200ms">
-            Streamline your healthcare practice with our comprehensive scheduling solution designed specifically for medical professionals.
-          </p>
-        </div>
-      </div>
-      
-      <!-- Animated Shapes -->
-      <div class="absolute -bottom-16 left-0 right-0 flex justify-center">
-        <div class="w-64 h-64 bg-blue-400 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
-      </div>
-    </section>
+    <HeroSection 
+      title="Powerful Features for"
+      highlight="Medical Scheduling"
+      subtitle="Streamline your healthcare practice with our comprehensive scheduling solution designed specifically for medical professionals."
+      client:load
+    />
 
     <!-- Interactive Feature Cards -->
     <section class="section relative z-10 overflow-hidden py-16">

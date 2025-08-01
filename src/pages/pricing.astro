@@ -4,12 +4,17 @@ import PricingComponent from '../components/Pricing.astro';
 import Header from '../components/Header.astro';
 import CTA from '../components/CTA.astro';
 import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.jsx';
 ---
 
-
-
-<Layout title="Welcome to Astro - Planetario template.">
+<Layout title="Schedulink - Pricing">
     <Header />
+    <HeroSection 
+      title="Simple, Transparent"
+      highlight="Pricing"
+      subtitle="Choose the perfect plan for your medical practice. No hidden fees, no surprises. Start with a free trial and scale as you grow."
+      client:load
+    />
     <PricingComponent />
     <CTA />
     <Footer />

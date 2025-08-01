@@ -1,0 +1,129 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CTA from '../components/CTA.astro';
+import HeroSection from '../components/HeroSection.jsx';
+---
+
+<Layout title="Schedulink - Our Story">
+  <Header />
+  <main>
+    <HeroSection 
+      title="Our"
+      highlight="Story"
+      subtitle="Discover how Schedulink was born from the real challenges faced by healthcare professionals, and how we're transforming medical scheduling one practice at a time."
+      client:load
+    />
+
+    <!-- Story Content -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">From Frustration to Innovation</h2>
+            <p class="text-xl text-gray-600">
+              Every great solution starts with a problem that needs solving.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <h3 class="text-2xl font-semibold mb-4 text-gray-900">The Problem</h3>
+              <p class="text-gray-600 mb-4">
+                Dr. Sarah Martinez was tired of the chaos. Double bookings, missed appointments, 
+                insurance verification delays, and endless phone calls were consuming her practice. 
+                Patient satisfaction was declining, and staff burnout was increasing.
+              </p>
+              <p class="text-gray-600">
+                Sound familiar? This story is repeated in thousands of medical practices across the country.
+              </p>
+            </div>
+            <div class="bg-red-50 border-2 border-red-100 rounded-xl p-8">
+              <div class="space-y-4">
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-red-500 rounded-full mr-3"></div>
+                  <span class="text-red-800 font-medium">40% no-show rate</span>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-red-500 rounded-full mr-3"></div>
+                  <span class="text-red-800 font-medium">2+ hours daily on scheduling</span>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-red-500 rounded-full mr-3"></div>
+                  <span class="text-red-800 font-medium">Frequent double bookings</span>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-red-500 rounded-full mr-3"></div>
+                  <span class="text-red-800 font-medium">Manual insurance verification</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div class="bg-blue-50 border-2 border-blue-100 rounded-xl p-8">
+              <div class="space-y-4">
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+                  <span class="text-blue-800 font-medium">Smart scheduling algorithms</span>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+                  <span class="text-blue-800 font-medium">Automated reminders</span>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+                  <span class="text-blue-800 font-medium">Real-time insurance verification</span>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+                  <span class="text-blue-800 font-medium">Comprehensive analytics</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold mb-4 text-gray-900">The Solution</h3>
+              <p class="text-gray-600 mb-4">
+                Our team of healthcare technology experts and former medical practice managers 
+                came together to build Schedulink. We didn't just create another scheduling tool – 
+                we crafted a comprehensive solution that understands the unique challenges of healthcare.
+              </p>
+              <p class="text-gray-600">
+                Every feature was designed with real medical practices in mind, tested by actual healthcare professionals.
+              </p>
+            </div>
+          </div>
+
+          <div class="text-center mb-16">
+            <h3 class="text-2xl font-semibold mb-6 text-gray-900">The Results</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+              <div class="bg-green-50 border-2 border-green-100 rounded-xl p-6">
+                <div class="text-3xl font-bold text-green-600 mb-2">60%</div>
+                <div class="text-green-800 font-medium">Reduction in No-Shows</div>
+              </div>
+              <div class="bg-blue-50 border-2 border-blue-100 rounded-xl p-6">
+                <div class="text-3xl font-bold text-blue-600 mb-2">2,000+</div>
+                <div class="text-blue-800 font-medium">Healthcare Professionals</div>
+              </div>
+              <div class="bg-purple-50 border-2 border-purple-100 rounded-xl p-6">
+                <div class="text-3xl font-bold text-purple-600 mb-2">95%</div>
+                <div class="text-purple-800 font-medium">Customer Satisfaction</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-8 text-center">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-900">Our Mission</h3>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+              To empower healthcare professionals with intelligent scheduling technology that reduces administrative burden, 
+              improves patient care, and allows medical practices to focus on what matters most – healing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <CTA />
+  <Footer />
+</Layout>
