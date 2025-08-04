@@ -1,0 +1,425 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.jsx';
+---
+
+<Layout title="Terms of Service - Schedulink">
+  <Header />
+  <main class="min-h-screen bg-gray-50">
+    <HeroSection
+      title="Terms of "
+      highlight="Service"
+      subtitle="Your use of our services is subject to these terms"
+      client:load
+    />
+
+    <!-- Terms Content -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8 md:p-12">
+          
+          <!-- Introduction -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Acceptance of Terms</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Welcome to Schedulink. These Terms of Service ("Terms") govern your use of our medical scheduling platform and related services ("Services") operated by Schedulink Inc. ("Company," "we," "our," or "us").
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              By accessing or using our Services, you agree to be bound by these Terms. If you disagree with any part of these terms, then you may not access the Service.
+            </p>
+          </div>
+
+          <!-- Service Description -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Service Description</h2>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg mb-6">
+              <h3 class="text-lg font-semibold text-blue-900 mb-3">What Schedulink Provides:</h3>
+              <div class="grid md:grid-cols-2 gap-4">
+                <ul class="text-blue-800 space-y-2">
+                  <li class="flex items-center">
+                    <svg class="w-4 h-4 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                    </svg>
+                    Medical appointment scheduling
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="w-4 h-4 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                    </svg>
+                    Patient management tools
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="w-4 h-4 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                    </svg>
+                    Automated reminders
+                  </li>
+                </ul>
+                <ul class="text-blue-800 space-y-2">
+                  <li class="flex items-center">
+                    <svg class="w-4 h-4 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                    </svg>
+                    Insurance verification
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="w-4 h-4 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                    </svg>
+                    Analytics and reporting
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="w-4 h-4 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                    </svg>
+                    Multi-location support
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- User Accounts -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">User Accounts and Registration</h2>
+            
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Account Requirements</h3>
+                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                  <li>You must be at least 18 years old to create an account</li>
+                  <li>You must provide accurate and complete registration information</li>
+                  <li>Healthcare providers must have valid professional licenses</li>
+                  <li>You are responsible for maintaining the confidentiality of your account credentials</li>
+                  <li>You must notify us immediately of any unauthorized use of your account</li>
+                </ul>
+              </div>
+
+              <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                <h3 class="text-lg font-semibold text-yellow-800 mb-3">Account Responsibilities</h3>
+                <p class="text-yellow-700">
+                  You are solely responsible for all activities that occur under your account. We recommend using strong passwords and enabling two-factor authentication for enhanced security.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Acceptable Use -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Acceptable Use Policy</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <!-- Permitted Uses -->
+              <div class="bg-green-50 p-6 rounded-lg border border-green-200">
+                <h3 class="text-lg font-semibold text-green-800 mb-4 flex items-center">
+                  <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                  </svg>
+                  Permitted Uses
+                </h3>
+                <ul class="text-green-700 space-y-2 text-sm">
+                  <li>• Legitimate medical appointment scheduling</li>
+                  <li>• Patient care coordination</li>
+                  <li>• Healthcare practice management</li>
+                  <li>• Insurance verification processes</li>
+                  <li>• Authorized medical record keeping</li>
+                </ul>
+              </div>
+
+              <!-- Prohibited Uses -->
+              <div class="bg-red-50 p-6 rounded-lg border border-red-200">
+                <h3 class="text-lg font-semibold text-red-800 mb-4 flex items-center">
+                  <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"></path>
+                  </svg>
+                  Prohibited Uses
+                </h3>
+                <ul class="text-red-700 space-y-2 text-sm">
+                  <li>• Unauthorized access to patient data</li>
+                  <li>• Fraudulent insurance claims</li>
+                  <li>• Spam or unsolicited communications</li>
+                  <li>• Malware or security threats</li>
+                  <li>• Violation of healthcare regulations</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Medical Disclaimer -->
+          <div class="mb-12 bg-orange-50 border-l-4 border-orange-600 p-6 rounded-r-lg">
+            <h2 class="text-2xl font-bold text-orange-900 mb-4 flex items-center">
+              <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.868-.833-2.598 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+              </svg>
+              Medical Disclaimer
+            </h2>
+            <p class="text-orange-800 leading-relaxed mb-4">
+              <strong>Schedulink is a scheduling and practice management platform only.</strong> We do not provide medical advice, diagnosis, or treatment. The platform facilitates communication between patients and healthcare providers but does not replace professional medical consultation.
+            </p>
+            <p class="text-orange-800 leading-relaxed">
+              Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay seeking it because of something you have read or accessed through our platform.
+            </p>
+          </div>
+
+          <!-- Payment Terms -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Payment Terms and Billing</h2>
+            
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Subscription Plans</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                  Schedulink offers various subscription plans with different features and pricing. All fees are non-refundable except as required by law or as specifically stated in our refund policy.
+                </p>
+                
+                <div class="bg-gray-50 p-4 rounded-lg">
+                  <h4 class="font-semibold text-gray-800 mb-2">Billing Cycle</h4>
+                  <ul class="text-gray-600 space-y-1 text-sm">
+                    <li>• Monthly subscriptions are billed every 30 days</li>
+                    <li>• Annual subscriptions are billed every 365 days</li>
+                    <li>• Payment is due at the beginning of each billing cycle</li>
+                    <li>• Failed payments may result in service suspension</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Price Changes</h3>
+                <p class="text-gray-600 leading-relaxed">
+                  We reserve the right to modify our pricing with 30 days' advance notice. Existing subscribers will be notified via email and may cancel their subscription before the new pricing takes effect.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Intellectual Property -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Intellectual Property Rights</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">Our Rights</h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-3">
+                  The Schedulink platform, including its software, design, text, graphics, and logos, is owned by Schedulink Inc. and protected by copyright, trademark, and other intellectual property laws.
+                </p>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  You may not copy, modify, distribute, or create derivative works of our platform without explicit written permission.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">Your Rights</h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-3">
+                  You retain ownership of any content you create or upload to the platform, including patient data and practice information.
+                </p>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  By using our service, you grant us a limited license to process and store your data as necessary to provide our services.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Privacy and Data Protection -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Privacy and Data Protection</h2>
+            
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <p class="text-blue-800 leading-relaxed mb-4">
+                Your privacy is important to us. Our collection, use, and protection of your personal and medical information is governed by our Privacy Policy, which forms an integral part of these Terms of Service.
+              </p>
+              <p class="text-blue-800 leading-relaxed">
+                We are committed to HIPAA compliance and employ industry-standard security measures to protect your data. For detailed information about our privacy practices, please review our <a href="/privacy" class="text-blue-600 underline hover:text-blue-800">Privacy Policy</a>.
+              </p>
+            </div>
+          </div>
+
+          <!-- Service Availability -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Service Availability and Limitations</h2>
+            
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <div class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                <div>
+                  <h4 class="font-semibold text-gray-800">Uptime Commitment</h4>
+                  <p class="text-gray-600 text-sm">We strive for 99.9% uptime but cannot guarantee uninterrupted service</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                <div>
+                  <h4 class="font-semibold text-gray-800">Maintenance Windows</h4>
+                  <p class="text-gray-600 text-sm">Scheduled maintenance will be announced in advance when possible</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                <div>
+                  <h4 class="font-semibold text-gray-800">Service Modifications</h4>
+                  <p class="text-gray-600 text-sm">We may modify or discontinue features with reasonable notice</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Limitation of Liability -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Limitation of Liability</h2>
+            
+            <div class="bg-red-50 border border-red-200 rounded-lg p-6">
+              <p class="text-red-800 leading-relaxed mb-4 font-semibold">
+                IMPORTANT: Please read this section carefully as it limits our liability to you.
+              </p>
+              <p class="text-red-700 leading-relaxed mb-4">
+                To the maximum extent permitted by law, Schedulink Inc. shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses.
+              </p>
+              <p class="text-red-700 leading-relaxed">
+                Our total liability for any claims arising from or related to these Terms or our Services shall not exceed the amount you paid us in the twelve (12) months preceding the claim.
+              </p>
+            </div>
+          </div>
+
+          <!-- Indemnification -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Indemnification</h2>
+            <p class="text-gray-600 leading-relaxed">
+              You agree to indemnify and hold harmless Schedulink Inc., its officers, directors, employees, and agents from any claims, damages, losses, liabilities, and expenses (including reasonable attorneys' fees) arising from your use of our Services, violation of these Terms, or infringement of any third-party rights.
+            </p>
+          </div>
+
+          <!-- Termination -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Termination</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="bg-purple-50 p-6 rounded-lg border border-purple-200">
+                <h3 class="text-lg font-semibold text-purple-800 mb-3">By You</h3>
+                <p class="text-purple-700 text-sm leading-relaxed">
+                  You may terminate your account at any time by contacting our support team or using the account cancellation feature in your dashboard.
+                </p>
+              </div>
+
+              <div class="bg-orange-50 p-6 rounded-lg border border-orange-200">
+                <h3 class="text-lg font-semibold text-orange-800 mb-3">By Us</h3>
+                <p class="text-orange-700 text-sm leading-relaxed">
+                  We may terminate or suspend your account immediately for violations of these Terms, illegal activities, or non-payment of fees.
+                </p>
+              </div>
+            </div>
+            
+            <div class="mt-6 bg-gray-100 p-4 rounded-lg">
+              <h4 class="font-semibold text-gray-800 mb-2">Effect of Termination</h4>
+              <p class="text-gray-600 text-sm">
+                Upon termination, your right to use the Services will cease immediately. We will provide you with a reasonable opportunity to export your data, subject to applicable laws and regulations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Governing Law -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Governing Law and Dispute Resolution</h2>
+            
+            <div class="space-y-4">
+              <div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Governing Law</h3>
+                <p class="text-gray-600 leading-relaxed">
+                  These Terms are governed by and construed in accordance with the laws of the State of California, without regard to its conflict of law principles.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Dispute Resolution</h3>
+                <p class="text-gray-600 leading-relaxed">
+                  Any disputes arising from these Terms or our Services will be resolved through binding arbitration in accordance with the rules of the American Arbitration Association, except for claims that may be brought in small claims court.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="mb-8 bg-gray-100 p-6 rounded-lg">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Contact Information</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              If you have questions about these Terms of Service, please contact us:
+            </p>
+            <div class="space-y-2 text-gray-700">
+              <p><strong>Email:</strong> legal@schedulink.com</p>
+              <p><strong>Phone:</strong> 1-800-SCHEDULE (1-800-724-3385)</p>
+              <p><strong>Address:</strong> Schedulink Legal Department<br>
+                 123 Healthcare Technology Blvd<br>
+                 Medical District, CA 90210</p>
+            </div>
+          </div>
+
+          <!-- Updates to Terms -->
+          <div class="border-t pt-8">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">Changes to Terms of Service</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              We reserve the right to modify these Terms at any time. We will notify users of any material changes by email and by posting the updated Terms on our website with a new "Last updated" date.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              Your continued use of our Services after the effective date of any changes constitutes acceptance of the revised Terms. If you do not agree to the modified Terms, you must discontinue use of our Services.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom styles for better readability */
+  .container {
+    max-width: 1200px;
+  }
+  
+  /* Enhanced link styling */
+  a {
+    transition: color 0.2s ease;
+  }
+  
+  /* Responsive typography */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    h2 {
+      font-size: 1.75rem;
+    }
+    
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  
+  /* Print styles */
+  @media print {
+    .bg-gradient-to-br {
+      background: #1f2937 !important;
+      color: white !important;
+    }
+    
+    .bg-blue-50,
+    .bg-green-50,
+    .bg-yellow-50,
+    .bg-red-50,
+    .bg-orange-50,
+    .bg-purple-50,
+    .bg-gray-50 {
+      background: #f9fafb !important;
+    }
+  }
+</style>

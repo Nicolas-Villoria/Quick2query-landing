@@ -1,0 +1,323 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.jsx';
+---
+
+<Layout title="Privacy Policy - Schedulink">
+  <Header />
+  <main class="min-h-screen bg-gray-50">
+    <HeroSection 
+      title="Privacy"
+      highlight="Policy"
+      subtitle="Your privacy and the security of your medical information is our top priority"
+      client:load
+    />
+
+    <!-- Privacy Policy Content -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8 md:p-12">
+          
+          <!-- Introduction -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Introduction</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Schedulink ("we," "our," or "us") is committed to protecting your privacy and ensuring the security of your personal and medical information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our medical scheduling platform and related services.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              This policy applies to all users of our platform, including healthcare providers, patients, and administrative staff. By using Schedulink, you consent to the practices described in this Privacy Policy.
+            </p>
+          </div>
+
+          <!-- HIPAA Compliance -->
+          <div class="mb-12 bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg">
+            <h2 class="text-2xl font-bold text-blue-900 mb-4 flex items-center">
+              <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+              </svg>
+              HIPAA Compliance
+            </h2>
+            <p class="text-blue-800 leading-relaxed">
+              Schedulink is fully compliant with the Health Insurance Portability and Accountability Act (HIPAA) and implements appropriate administrative, physical, and technical safeguards to protect your Protected Health Information (PHI). We maintain Business Associate Agreements (BAAs) with all healthcare providers using our platform.
+            </p>
+          </div>
+
+          <!-- Information We Collect -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Information We Collect</h2>
+            
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Personal Information</h3>
+                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                  <li>Name, email address, phone number, and mailing address</li>
+                  <li>Date of birth and demographic information</li>
+                  <li>Emergency contact information</li>
+                  <li>Insurance information and payment details</li>
+                  <li>Professional credentials (for healthcare providers)</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Medical Information</h3>
+                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                  <li>Medical history and current health conditions</li>
+                  <li>Medication lists and allergies</li>
+                  <li>Appointment notes and treatment records</li>
+                  <li>Test results and diagnostic information</li>
+                  <li>Referral information and care coordination data</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Technical Information</h3>
+                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                  <li>IP address, browser type, and device information</li>
+                  <li>Usage data and platform interactions</li>
+                  <li>Location data (for appointment reminders and directions)</li>
+                  <li>Cookies and similar tracking technologies</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- How We Use Your Information -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">How We Use Your Information</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="bg-green-50 p-6 rounded-lg border border-green-200">
+                <h3 class="text-lg font-semibold text-green-800 mb-3">Healthcare Operations</h3>
+                <ul class="text-green-700 space-y-2 text-sm">
+                  <li>• Schedule and manage appointments</li>
+                  <li>• Facilitate patient-provider communication</li>
+                  <li>• Send appointment reminders and notifications</li>
+                  <li>• Process insurance verification and billing</li>
+                  <li>• Coordinate care between providers</li>
+                </ul>
+              </div>
+
+              <div class="bg-purple-50 p-6 rounded-lg border border-purple-200">
+                <h3 class="text-lg font-semibold text-purple-800 mb-3">Platform Improvement</h3>
+                <ul class="text-purple-700 space-y-2 text-sm">
+                  <li>• Analyze usage patterns and performance</li>
+                  <li>• Develop new features and services</li>
+                  <li>• Provide customer support</li>
+                  <li>• Ensure platform security and reliability</li>
+                  <li>• Comply with legal and regulatory requirements</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Information Sharing -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Information Sharing and Disclosure</h2>
+            
+            <div class="bg-gray-50 p-6 rounded-lg mb-6">
+              <p class="text-gray-700 font-medium mb-4">We only share your information in the following circumstances:</p>
+              
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <div class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">With Your Healthcare Providers</h4>
+                    <p class="text-gray-600 text-sm">To facilitate your medical care and appointment scheduling</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">With Your Consent</h4>
+                    <p class="text-gray-600 text-sm">When you explicitly authorize us to share specific information</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">For Legal Compliance</h4>
+                    <p class="text-gray-600 text-sm">When required by law, court order, or regulatory authority</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">Service Providers</h4>
+                    <p class="text-gray-600 text-sm">With trusted third parties who help us operate our platform (under strict confidentiality agreements)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Data Security -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Data Security</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+              <div class="text-center p-6 bg-red-50 rounded-lg border border-red-200">
+                <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                  </svg>
+                </div>
+                <h3 class="font-semibold text-red-800 mb-2">Encryption</h3>
+                <p class="text-red-700 text-sm">256-bit SSL encryption for all data transmission and storage</p>
+              </div>
+
+              <div class="text-center p-6 bg-blue-50 rounded-lg border border-blue-200">
+                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <h3 class="font-semibold text-blue-800 mb-2">Access Control</h3>
+                <p class="text-blue-700 text-sm">Multi-factor authentication and role-based access permissions</p>
+              </div>
+
+              <div class="text-center p-6 bg-green-50 rounded-lg border border-green-200">
+                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <h3 class="font-semibold text-green-800 mb-2">Monitoring</h3>
+                <p class="text-green-700 text-sm">24/7 security monitoring and regular security audits</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Your Rights -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Your Privacy Rights</h2>
+            
+            <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+              <h3 class="text-lg font-semibold text-yellow-800 mb-4">You have the right to:</h3>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div class="space-y-2">
+                  <div class="flex items-center text-yellow-700">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                    </svg>
+                    Access your personal information
+                  </div>
+                  <div class="flex items-center text-yellow-700">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                    </svg>
+                    Correct inaccurate information
+                  </div>
+                  <div class="flex items-center text-yellow-700">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                    </svg>
+                    Request deletion of your data
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <div class="flex items-center text-yellow-700">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                    </svg>
+                    Opt-out of communications
+                  </div>
+                  <div class="flex items-center text-yellow-700">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                    </svg>
+                    Restrict processing of your data
+                  </div>
+                  <div class="flex items-center text-yellow-700">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                    </svg>
+                    File a complaint with authorities
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Data Retention -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Data Retention</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              We retain your personal and medical information only for as long as necessary to provide our services and comply with legal requirements. Medical records are typically retained for a minimum of 7 years after your last appointment, in accordance with healthcare industry standards and regulatory requirements.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              When data is no longer needed, we securely delete or anonymize it using industry-standard data destruction methods.
+            </p>
+          </div>
+
+          <!-- Cookies and Tracking -->
+          <div class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Cookies and Tracking Technologies</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              We use cookies and similar technologies to enhance your experience on our platform. These technologies help us remember your preferences, analyze usage patterns, and improve our services.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              You can control cookie settings through your browser, though disabling certain cookies may affect platform functionality.
+            </p>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="mb-8 bg-gray-100 p-6 rounded-lg">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Contact Us</h2>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              If you have questions about this Privacy Policy or wish to exercise your privacy rights, please contact us:
+            </p>
+            <div class="space-y-2 text-gray-700">
+              <p><strong>Email:</strong> privacy@schedulink.com</p>
+              <p><strong>Phone:</strong> 1-800-SCHEDULE (1-800-724-3385)</p>
+              <p><strong>Address:</strong> Schedulink Privacy Officer<br>
+                 123 Healthcare Technology Blvd<br>
+                 Medical District, CA 90210</p>
+            </div>
+          </div>
+
+          <!-- Updates -->
+          <div class="border-t pt-8">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">Policy Updates</h2>
+            <p class="text-gray-600 leading-relaxed">
+              We may update this Privacy Policy periodically to reflect changes in our practices, technology, or legal requirements. We will notify you of any material changes through email or platform notifications. Your continued use of our services after such updates constitutes acceptance of the revised policy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom styles for better readability */
+  .container {
+    max-width: 1200px;
+  }
+  
+  /* Responsive typography */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    h2 {
+      font-size: 1.75rem;
+    }
+    
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+</style>
