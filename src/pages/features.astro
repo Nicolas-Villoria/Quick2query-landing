@@ -33,7 +33,7 @@ import HeroSection from '../components/HeroSection.jsx';
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Feature Card 1: Smart Patient Booking -->
           <div class="feature-card group perspective">
-            <div class="relative h-full transform-gpu transition-all duration-700 preserve-3d hover:rotate-y-180 cursor-pointer touch-action-card">
+            <div class="relative h-full transform-gpu preserve-3d cursor-pointer">
               <div class="absolute inset-0 backface-hidden">
                 <div class="bg-white rounded-xl border-2 border-blue-100 hover:border-blue-300 transition-colors duration-300 shadow-lg hover:shadow-xl p-8 h-full flex flex-col items-center justify-center text-center">
                   <div class="w-16 h-16 rounded-xl bg-blue-100 flex items-center justify-center mb-6">
@@ -366,6 +366,11 @@ import HeroSection from '../components/HeroSection.jsx';
   
   .preserve-3d {
     transform-style: preserve-3d;
+    transition: transform 0.7s ease;
+  }
+  
+  .preserve-3d:hover {
+    transform: rotateY(180deg);
   }
   
   .backface-hidden {
@@ -378,11 +383,11 @@ import HeroSection from '../components/HeroSection.jsx';
   
   /* Touch device support for 3D cards */
   @media (hover: none) {
-    .touch-action-card {
-      transition: none;
+    .preserve-3d:hover {
+      transform: none;
     }
     
-    .touch-action-card:active {
+    .preserve-3d.flipped {
       transform: rotateY(180deg);
     }
   }
@@ -478,16 +483,7 @@ import HeroSection from '../components/HeroSection.jsx';
   const cleanupFunctions: Array<() => void> = [];
 
   // Function to initialize all interactive features
-  function initializeFeatures() {
-    // Initialize Parallax Effect
-    initializeParallax();
-    
-    // Initialize Particle Animation
-    initializeParticles();
-    
-    // Initialize Interactive Demo Canvas
-    initializeCanvas();
-    
+  function initializeFeatures() {    
     // Initialize touch support for 3D cards
     initializeTouchCards();
   }
@@ -500,349 +496,34 @@ import HeroSection from '../components/HeroSection.jsx';
       const cardInner = card.querySelector('.preserve-3d');
       
       if (cardInner) {
-        // 使用点击事件而不是touchstart，这样更可靠
-        const handleClick = () => {
+        let isFlipped = false;
+        
+        const handleInteraction = () => {
+          // For touch devices, toggle the flipped state
           if (window.matchMedia('(hover: none)').matches) {
-            cardInner.classList.toggle('rotate-y-180');
+            isFlipped = !isFlipped;
+            if (isFlipped) {
+              cardInner.classList.add('flipped');
+            } else {
+              cardInner.classList.remove('flipped');
+            }
           }
         };
         
-        cardInner.addEventListener('click', handleClick);
+        // Add both click and touch events for better compatibility
+        cardInner.addEventListener('click', handleInteraction);
+        cardInner.addEventListener('touchstart', handleInteraction);
         
         // Add cleanup function
         cleanupFunctions.push(() => {
           if (cardInner) {
-            cardInner.removeEventListener('click', handleClick);
+            cardInner.removeEventListener('click', handleInteraction);
+            cardInner.removeEventListener('touchstart', handleInteraction);
           }
         });
       }
     });
   }
-
-  // Parallax Effect
-  function initializeParallax() {
-    const parallaxContainer = document.querySelector('.parallax-demo');
-    if (parallaxContainer) {
-      const layers = parallaxContainer.querySelectorAll('.parallax-layer');
-      
-      const handleMouseMove = (e: MouseEvent) => {
-        const containerRect = parallaxContainer.getBoundingClientRect();
-        const relX = e.clientX - containerRect.left;
-        const relY = e.clientY - containerRect.top;
-        
-        const xPercent = relX / containerRect.width - 0.5;
-        const yPercent = relY / containerRect.height - 0.5;
-        
-        layers.forEach((layer, index) => {
-          const depth = index * 10;
-          const moveX = xPercent * depth;
-          const moveY = yPercent * depth;
-          
-          (layer as HTMLElement).style.transform = `translate3d(${moveX}px, ${moveY}px, 0)`;
-        });
-      };
-      
-      const handleTouchMove = (e: TouchEvent) => {
-        if (e.touches.length > 0) {
-          const containerRect = parallaxContainer.getBoundingClientRect();
-          const touch = e.touches[0];
-          const relX = touch.clientX - containerRect.left;
-          const relY = touch.clientY - containerRect.top;
-          
-          const xPercent = relX / containerRect.width - 0.5;
-          const yPercent = relY / containerRect.height - 0.5;
-          
-          layers.forEach((layer, index) => {
-            const depth = index * 10;
-            const moveX = xPercent * depth;
-            const moveY = yPercent * depth;
-            
-            (layer as HTMLElement).style.transform = `translate3d(${moveX}px, ${moveY}px, 0)`;
-          });
-        }
-      };
-      
-      const handleMouseLeave = () => {
-        layers.forEach((layer) => {
-          (layer as HTMLElement).style.transform = 'translate3d(0, 0, 0)';
-        });
-      };
-      
-      const handleTouchEnd = () => {
-        layers.forEach((layer) => {
-          (layer as HTMLElement).style.transform = 'translate3d(0, 0, 0)';
-        });
-      };
-      
-      // Use type assertion to fix TypeScript errors
-      (parallaxContainer as HTMLElement).addEventListener('mousemove', handleMouseMove);
-      (parallaxContainer as HTMLElement).addEventListener('touchmove', handleTouchMove);
-      (parallaxContainer as HTMLElement).addEventListener('mouseleave', handleMouseLeave);
-      (parallaxContainer as HTMLElement).addEventListener('touchend', handleTouchEnd);
-      
-      // Add cleanup function
-      cleanupFunctions.push(() => {
-        if (parallaxContainer) {
-          (parallaxContainer as HTMLElement).removeEventListener('mousemove', handleMouseMove);
-          (parallaxContainer as HTMLElement).removeEventListener('touchmove', handleTouchMove);
-          (parallaxContainer as HTMLElement).removeEventListener('mouseleave', handleMouseLeave);
-          (parallaxContainer as HTMLElement).removeEventListener('touchend', handleTouchEnd);
-        }
-      });
-    }
-  }
-
-  // Particle Animation
-  function initializeParticles() {
-    const particlesContainer = document.querySelector('.particles-container');
-    const particlesElement = document.querySelector('.particles');
-    
-    if (particlesContainer && particlesElement) {
-      const createParticles = () => {
-        particlesElement.innerHTML = '';
-        const containerRect = particlesContainer.getBoundingClientRect();
-        
-        // Reduce particle count on mobile
-        const particleCount = window.innerWidth < 768 ? 15 : 30;
-        
-        for (let i = 0; i < particleCount; i++) {
-          const particle = document.createElement('div');
-          particle.classList.add('particle');
-          
-          const size = Math.random() * 6 + 2;
-          const x = Math.random() * containerRect.width;
-          const y = Math.random() * containerRect.height;
-          const duration = Math.random() * 2 + 1;
-          const delay = Math.random() * 0.5;
-          
-          particle.style.cssText = `
-            position: absolute;
-            width: ${size}px;
-            height: ${size}px;
-            background-color: var(--tw-color-primary-400, #a78bfa);
-            border-radius: 50%;
-            left: ${x}px;
-            top: ${y}px;
-            opacity: 0;
-            animation: float ${duration}s ease-in-out ${delay}s infinite alternate;
-          `;
-          
-          particlesElement.appendChild(particle);
-        }
-      };
-      
-      createParticles();
-      
-      // Add touch support
-      const handleTouch = () => {
-        (particlesContainer as HTMLElement).classList.add('active');
-        setTimeout(() => {
-          (particlesContainer as HTMLElement).classList.remove('active');
-        }, 1000);
-      };
-      
-      (particlesContainer as HTMLElement).addEventListener('touchstart', handleTouch);
-      
-      // Add animation keyframes
-      const style = document.createElement('style');
-      style.textContent = `
-        @keyframes float {
-          0% {
-            transform: translateY(0) translateX(0);
-            opacity: 0;
-          }
-          50% {
-            opacity: 0.8;
-          }
-          100% {
-            transform: translateY(-20px) translateX(10px);
-            opacity: 0;
-          }
-        }
-        
-        .particles-container.active .particles {
-          opacity: 1;
-        }
-      `;
-      document.head.appendChild(style);
-      
-      // Add cleanup function
-      cleanupFunctions.push(() => {
-        if (style && document.head.contains(style)) {
-          document.head.removeChild(style);
-        }
-        
-        if (particlesContainer) {
-          (particlesContainer as HTMLElement).removeEventListener('touchstart', handleTouch);
-        }
-      });
-    }
-  }
-
-  // Interactive Demo Canvas
-  function initializeCanvas() {
-    const canvas = document.getElementById('demo-canvas') as HTMLCanvasElement;
-    const demoButton = document.getElementById('demo-button') as HTMLButtonElement;
-    
-    if (canvas && demoButton) {
-      const ctx = canvas.getContext('2d');
-      let isActive = false;
-      let particles: Array<Particle> = [];
-      let animationFrameId: number | null = null;
-      
-      // Resize canvas to match container
-      const resizeCanvas = () => {
-        const container = canvas.parentElement;
-        if (container) {
-          canvas.width = container.offsetWidth;
-          canvas.height = container.offsetHeight;
-        }
-      };
-      
-      resizeCanvas();
-      window.addEventListener('resize', resizeCanvas);
-      
-      // Particle class
-      class Particle {
-        x: number;
-        y: number;
-        size: number;
-        color: string;
-        speedX: number;
-        speedY: number;
-        life: number;
-        
-        constructor(x: number, y: number, color?: string) {
-          this.x = x;
-          this.y = y;
-          this.size = Math.random() * 5 + 2;
-          this.color = color || `hsl(${Math.random() * 60 + 240}, 70%, 60%)`;
-          this.speedX = Math.random() * 3 - 1.5;
-          this.speedY = Math.random() * 3 - 1.5;
-          this.life = 100;
-        }
-        
-        update() {
-          this.x += this.speedX;
-          this.y += this.speedY;
-          this.life -= 1;
-          
-          if (this.size > 0.2) this.size -= 0.1;
-        }
-        
-        draw() {
-          if (ctx) {
-            ctx.fillStyle = this.color;
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fill();
-          }
-        }
-      }
-      
-      // Animation loop
-      function animate() {
-        if (!isActive) return;
-        
-        if (ctx) {
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          
-          for (let i = 0; i < particles.length; i++) {
-            particles[i].update();
-            particles[i].draw();
-            
-            if (particles[i].life <= 0 || particles[i].size <= 0.2) {
-              particles.splice(i, 1);
-              i--;
-            }
-          }
-        }
-        
-        animationFrameId = requestAnimationFrame(animate);
-      }
-      
-      // Event listeners
-      const handleButtonClick = () => {
-        isActive = !isActive;
-        canvas.style.opacity = isActive ? '1' : '0.5';
-        canvas.style.pointerEvents = isActive ? 'auto' : 'none';
-        demoButton.textContent = isActive ? 'Deactivate Demo' : 'Activate Demo';
-        
-        if (isActive) {
-          animate();
-        } else if (animationFrameId) {
-          cancelAnimationFrame(animationFrameId);
-          animationFrameId = null;
-        }
-      };
-      
-      const handleMouseMove = (e: MouseEvent) => {
-        if (!isActive) return;
-        
-        const rect = canvas.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        
-        for (let i = 0; i < 3; i++) {
-          particles.push(new Particle(x, y));
-        }
-      };
-      
-      const handleClick = (e: MouseEvent) => {
-        if (!isActive) return;
-        
-        const rect = canvas.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        
-        for (let i = 0; i < 20; i++) {
-          particles.push(new Particle(x, y, `hsl(${Math.random() * 60 + 40}, 100%, 60%)`));
-        }
-      };
-      
-      demoButton.addEventListener('click', handleButtonClick);
-      canvas.addEventListener('mousemove', handleMouseMove);
-      canvas.addEventListener('click', handleClick);
-      
-      // Add cleanup function
-      cleanupFunctions.push(() => {
-        if (animationFrameId) {
-          cancelAnimationFrame(animationFrameId);
-        }
-        
-        window.removeEventListener('resize', resizeCanvas);
-        
-        if (demoButton) {
-          demoButton.removeEventListener('click', handleButtonClick);
-        }
-        
-        if (canvas) {
-          canvas.removeEventListener('mousemove', handleMouseMove);
-          canvas.removeEventListener('click', handleClick);
-        }
-        
-        // Clear particles array
-        particles = [];
-      });
-    }
-  }
-  
-  // Initialize features on initial page load
-  document.addEventListener('DOMContentLoaded', initializeFeatures);
-  
-  // Initialize features when navigating to this page with Astro's view transitions
-  document.addEventListener('astro:page-load', initializeFeatures);
-  
-  // Cleanup when page is unloaded or before navigation
-  document.addEventListener('astro:before-swap', () => {
-    // Execute all cleanup functions
-    cleanupFunctions.forEach(cleanup => cleanup());
-    // Clear the array
-    cleanupFunctions.length = 0;
-  });
-  
-  // Also clean up on window unload as a fallback
-  window.addEventListener('unload', () => {
-    cleanupFunctions.forEach(cleanup => cleanup());
-  });
 </script>
+
+  
