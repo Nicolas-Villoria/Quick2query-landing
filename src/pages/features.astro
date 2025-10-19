@@ -6,14 +6,14 @@ import CTA from '../components/CTA.astro';
 import HeroSection from '../components/HeroSection.jsx';
 ---
 
-<Layout title="Schedulink - Features">
+<Layout title="Quick2query - Features">
   <Header />
   <main>
     <!-- Hero Section -->
     <HeroSection 
-      title="Powerful Features for"
-      highlight="Medical Scheduling"
-      subtitle="Streamline your healthcare practice with our comprehensive scheduling solution designed specifically for medical professionals."
+      title="Advanced Features for"
+      highlight="Data Interaction"
+      subtitle="Transform your data access with our powerful Natural Language to SQL API, designed for enterprise-grade performance and security."
       client:load
     />
 
@@ -21,33 +21,33 @@ import HeroSection from '../components/HeroSection.jsx';
     <section class="section relative z-10 overflow-hidden py-16">
       <div class="container mx-auto px-4">
         <div class="text-center mb-16">
-          <span class="inline-block px-4 py-2 rounded-full bg-blue-100 text-blue-600 font-medium text-sm mb-4">
-            Core Features
+          <span class="inline-block px-4 py-2 rounded-full bg-tech/10 text-tech font-medium text-sm mb-4 font-secondary">
+            Core Capabilities
           </span>
-          <h2 class="text-3xl font-bold mb-4 text-gray-900">Everything You Need for Medical Scheduling</h2>
-          <p class="text-gray-600 max-w-2xl mx-auto">
-            Our comprehensive suite of features is designed to streamline your medical practice operations and improve patient care.
+          <h2 class="text-3xl font-bold mb-4 text-text font-primary">Enterprise-Grade Natural Language Processing</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto font-secondary">
+            Our advanced AI-powered features enable seamless translation of natural language to SQL, with built-in optimization and security.
           </p>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Feature Card 1: Smart Patient Booking -->
+          <!-- Feature Card 1: Natural Language Processing -->
           <div class="feature-card group perspective">
             <div class="relative h-full transform-gpu preserve-3d cursor-pointer">
               <div class="absolute inset-0 backface-hidden">
-                <div class="bg-white rounded-xl border-2 border-blue-100 hover:border-blue-300 transition-colors duration-300 shadow-lg hover:shadow-xl p-8 h-full flex flex-col items-center justify-center text-center">
-                  <div class="w-16 h-16 rounded-xl bg-blue-100 flex items-center justify-center mb-6">
-                    <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                <div class="bg-white rounded-xl border-2 border-tech/20 hover:border-tech/40 transition-colors duration-300 shadow-lg hover:shadow-xl p-8 h-full flex flex-col items-center justify-center text-center">
+                  <div class="w-16 h-16 rounded-xl bg-tech/10 flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-tech" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
                     </svg>
                   </div>
-                  <h3 class="text-xl font-semibold mb-3 text-gray-900">Smart Patient Booking</h3>
-                  <p class="text-gray-600">Intelligent scheduling system that prevents double bookings and optimizes appointment slots.</p>
+                  <h3 class="text-xl font-semibold mb-3 text-text font-primary">Natural Language Understanding</h3>
+                  <p class="text-gray-600 font-secondary">Advanced AI that comprehends complex business queries and converts them into precise SQL statements.</p>
                 </div>
               </div>
               <div class="absolute inset-0 backface-hidden rotate-y-180">
-                <div class="bg-blue-600 rounded-xl p-8 h-full text-white flex flex-col items-center justify-center text-center">
-                  <h3 class="text-xl font-semibold mb-4">How It Works</h3>
+                <div class="bg-gradient-to-br from-tech to-primary rounded-xl p-8 h-full text-white flex flex-col items-center justify-center text-center">
+                  <h3 class="text-xl font-semibold mb-4 font-primary">How It Works</h3>
                   <p class="mb-4">Our AI-powered system analyzes appointment patterns to suggest optimal scheduling.</p>
                   <ul class="text-left space-y-2 mb-4">
                     <li>• Real-time availability checking</li>
@@ -107,46 +107,45 @@ import HeroSection from '../components/HeroSection.jsx';
             </div>
           </div>
 
-          <!-- Feature Card 4: Multi-Location Support -->
+          <!-- Feature Card 4: Multi-Database Support -->
           <div class="feature-card">
-            <div class="bg-white rounded-xl border-2 border-orange-100 hover:border-orange-300 transition-colors duration-300 shadow-lg hover:shadow-xl p-8 h-full">
-              <div class="w-16 h-16 rounded-xl bg-orange-100 flex items-center justify-center mb-6">
-                <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            <div class="bg-white rounded-xl border-2 border-primary/20 hover:border-primary/40 transition-colors duration-300 shadow-lg hover:shadow-xl p-8 h-full">
+              <div class="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2 1.5 3 3.5 3s3.5-1 3.5-3V7c0-2-1.5-3-3.5-3S4 5 4 7zm12 0v10c0 2 1.5 3 3.5 3s3.5-1 3.5-3V7c0-2-1.5-3-3.5-3S16 5 16 7z"></path>
                 </svg>
               </div>
-              <h3 class="text-xl font-semibold mb-3 text-gray-900">Multi-Location Support</h3>
-              <p class="text-gray-600 mb-6">Manage multiple clinics, hospitals, or practice locations from a single dashboard.</p>
+              <h3 class="text-xl font-semibold mb-3 text-text font-primary">Multi-Database Support</h3>
+              <p class="text-gray-600 mb-6 font-secondary">Seamlessly work with multiple database engines and versions through a single unified API.</p>
               
               <div class="grid grid-cols-2 gap-2">
-                <div class="text-center p-2 bg-orange-50 rounded border border-orange-200">
-                  <div class="text-lg font-bold text-orange-600">4</div>
-                  <div class="text-xs text-orange-800">Locations</div>
+                <div class="text-center p-2 bg-primary/5 rounded border border-primary/20">
+                  <div class="text-lg font-bold text-primary">6+</div>
+                  <div class="text-xs text-primary/80">Database Types</div>
                 </div>
-                <div class="text-center p-2 bg-orange-50 rounded border border-orange-200">
-                  <div class="text-lg font-bold text-orange-600">12</div>
-                  <div class="text-xs text-orange-800">Providers</div>
+                <div class="text-center p-2 bg-primary/5 rounded border border-primary/20">
+                  <div class="text-lg font-bold text-primary">99.9%</div>
+                  <div class="text-xs text-primary/80">Compatibility</div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Feature Card 5: Insurance Verification -->
+          <!-- Feature Card 5: Enterprise Security -->
           <div class="feature-card">
-            <div class="bg-white rounded-xl border-2 border-teal-100 hover:border-teal-300 transition-colors duration-300 shadow-lg hover:shadow-xl p-8 h-full">
-              <div class="w-16 h-16 rounded-xl bg-teal-100 flex items-center justify-center mb-6">
-                <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="bg-white rounded-xl border-2 border-tech/20 hover:border-tech/40 transition-colors duration-300 shadow-lg hover:shadow-xl p-8 h-full">
+              <div class="w-16 h-16 rounded-xl bg-tech/10 flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-tech" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                 </svg>
               </div>
-              <h3 class="text-xl font-semibold mb-3 text-gray-900">Insurance Verification</h3>
-              <p class="text-gray-600 mb-6">Automatically verify patient insurance coverage and benefits before appointments.</p>
+              <h3 class="text-xl font-semibold mb-3 text-text font-primary">Enterprise Security</h3>
+              <p class="text-gray-600 mb-6 font-secondary">Bank-grade security with end-to-end encryption, role-based access control, and comprehensive audit logging.</p>
               
               <div class="space-y-2">
-                <div class="flex justify-between items-center p-2 bg-teal-50 rounded border border-teal-200">
-                  <span class="text-sm text-teal-800">Coverage Status</span>
-                  <span class="text-xs bg-teal-600 text-white px-2 py-1 rounded">Active</span>
+                <div class="flex justify-between items-center p-2 bg-tech/5 rounded border border-tech/20">
+                  <span class="text-sm text-tech font-secondary">SOC 2 Type II</span>
+                  <span class="text-xs bg-tech text-white px-2 py-1 rounded font-secondary">Certified</span>
                 </div>
                 <div class="flex justify-between items-center p-2 bg-teal-50 rounded border border-teal-200">
                   <span class="text-sm text-teal-800">Copay Amount</span>
@@ -156,29 +155,29 @@ import HeroSection from '../components/HeroSection.jsx';
             </div>
           </div>
 
-          <!-- Feature Card 6: Analytics & Reporting -->
+          <!-- Feature Card 6: Performance Optimization -->
           <div class="feature-card">
-            <div class="bg-white rounded-xl border-2 border-red-100 hover:border-red-300 transition-colors duration-300 shadow-lg hover:shadow-xl p-8 h-full">
-              <div class="w-16 h-16 rounded-xl bg-red-100 flex items-center justify-center mb-6">
-                <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            <div class="bg-white rounded-xl border-2 border-accent/20 hover:border-accent/40 transition-colors duration-300 shadow-lg hover:shadow-xl p-8 h-full">
+              <div class="w-16 h-16 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                 </svg>
               </div>
-              <h3 class="text-xl font-semibold mb-3 text-gray-900">Analytics & Reporting</h3>
-              <p class="text-gray-600 mb-6">Comprehensive insights into practice performance, patient trends, and revenue metrics.</p>
+              <h3 class="text-xl font-semibold mb-3 text-text font-primary">Performance Optimization</h3>
+              <p class="text-gray-600 mb-6 font-secondary">Intelligent query optimization engine that ensures fast and efficient database operations.</p>
               
               <div class="space-y-3">
                 <div class="flex items-center justify-between">
-                  <span class="text-sm text-gray-600">No-show Rate</span>
-                  <span class="text-sm font-semibold text-green-600">↓ 15%</span>
+                  <span class="text-sm text-gray-600 font-secondary">Query Speed</span>
+                  <span class="text-sm font-semibold text-accent">↓ 45ms avg</span>
                 </div>
                 <div class="flex items-center justify-between">
-                  <span class="text-sm text-gray-600">Patient Satisfaction</span>
-                  <span class="text-sm font-semibold text-blue-600">94%</span>
+                  <span class="text-sm text-gray-600 font-secondary">Resource Usage</span>
+                  <span class="text-sm font-semibold text-accent">↓ 60%</span>
                 </div>
                 <div class="flex items-center justify-between">
-                  <span class="text-sm text-gray-600">Revenue Growth</span>
-                  <span class="text-sm font-semibold text-green-600">↑ 23%</span>
+                  <span class="text-sm text-gray-600 font-secondary">Cache Hit Rate</span>
+                  <span class="text-sm font-semibold text-accent">98%</span>
                 </div>
               </div>
             </div>
@@ -188,43 +187,43 @@ import HeroSection from '../components/HeroSection.jsx';
     </section>
 
     <!-- Interactive Demo Section -->
-    <section class="section bg-gray-50 relative overflow-hidden py-16">
+    <section class="section bg-neutral relative overflow-hidden py-16">
       <div class="container mx-auto px-4">
         <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="inline-block px-4 py-2 rounded-full bg-blue-100 text-blue-600 font-medium text-sm mb-4">
-            Live Demo
+          <span class="inline-block px-4 py-2 rounded-full bg-tech/10 text-tech font-medium text-sm mb-4 font-secondary">
+            Interactive API Playground
           </span>
-          <h2 class="text-3xl font-bold mb-6 text-gray-900">Experience Schedulink in Action</h2>
-          <p class="text-gray-600">
-            Try our interactive scheduling demo to see how easy it is to manage patient appointments and streamline your practice workflow.
+          <h2 class="text-3xl font-bold mb-6 text-text font-primary">Try Quick2query in Action</h2>
+          <p class="text-gray-600 font-secondary">
+            Experience the power of natural language to SQL translation in our interactive playground. Test real queries and see the results instantly.
           </p>
         </div>
         
-        <div class="interactive-demo bg-white rounded-xl shadow-xl overflow-hidden border-2 border-gray-100 mx-auto max-w-4xl">
-          <div class="demo-header bg-gray-100 p-4 flex items-center border-b-2 border-gray-200">
+        <div class="interactive-demo bg-white rounded-xl shadow-xl overflow-hidden border-2 border-tech/20 mx-auto max-w-4xl">
+          <div class="demo-header bg-tech/5 p-4 flex items-center border-b-2 border-tech/20">
             <div class="flex space-x-2 mr-4">
               <div class="w-3 h-3 rounded-full bg-red-500"></div>
               <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
               <div class="w-3 h-3 rounded-full bg-green-500"></div>
             </div>
-            <div class="flex-1 bg-white rounded-full h-8 flex items-center px-4 text-sm text-gray-500 border border-gray-300">
-              schedulink.com/dashboard
+            <div class="flex-1 bg-white rounded-full h-8 flex items-center px-4 text-sm text-gray-500 border border-tech/20 font-mono">
+              api.quick2query.com/playground
             </div>
           </div>
-          <div class="demo-content p-8 h-96 flex items-center justify-center relative bg-gradient-to-br from-blue-50 to-white">
+          <div class="demo-content p-8 h-96 flex items-center justify-center relative bg-gradient-to-br from-background to-white">
             <div class="text-center">
-              <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-blue-200">
-                <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              <div class="w-20 h-20 bg-tech/10 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-tech/20">
+                <svg class="w-10 h-10 text-tech" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                 </svg>
               </div>
-              <h3 class="text-2xl font-bold mb-4 text-gray-900">Interactive Scheduling Demo</h3>
-              <p class="text-gray-600 mb-6">Click anywhere in this area to simulate booking an appointment</p>
-              <button id="demo-button" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 border-2 border-blue-600 hover:border-blue-700">
-                Start Scheduling Demo
+              <h3 class="text-2xl font-bold mb-4 text-text font-primary">Try Natural Language Queries</h3>
+              <p class="text-gray-600 mb-6 font-secondary">Enter your question in plain English and see it transform into SQL</p>
+              <button id="demo-button" class="bg-gradient-to-r from-primary to-tech hover:from-tech hover:to-primary text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 font-secondary">
+                Open API Playground
               </button>
             </div>
-            <canvas id="demo-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-50"></canvas>
+            <canvas id="demo-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-30"></canvas>
           </div>
         </div>
       </div>
@@ -234,109 +233,115 @@ import HeroSection from '../components/HeroSection.jsx';
     <section class="section py-16">
       <div class="container mx-auto px-4">
         <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="inline-block px-4 py-2 rounded-full bg-green-100 text-green-600 font-medium text-sm mb-4">
-            Feature Comparison
+          <span class="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4 font-secondary">
+            Comparison
           </span>
-          <h2 class="text-3xl font-bold mb-6 text-gray-900">Why Choose Schedulink?</h2>
-          <p class="text-gray-600">
-            See how Schedulink compares to traditional scheduling methods and other medical software solutions.
+          <h2 class="text-3xl font-bold mb-6 text-text font-primary">Why Choose Quick2query?</h2>
+          <p class="text-gray-600 font-secondary">
+            See how Quick2query compares to traditional database querying methods and other SQL generation tools.
           </p>
         </div>
         
         <div class="comparison-table-container overflow-x-auto pb-4">
-          <table class="comparison-table w-full border-collapse min-w-[640px] bg-white rounded-xl shadow-lg overflow-hidden border-2 border-gray-200">
+          <table class="comparison-table w-full border-collapse min-w-[640px] bg-white rounded-xl shadow-lg overflow-hidden border-2 border-tech/20">
             <thead>
               <tr>
-                <th class="p-4 text-left bg-gray-100 text-gray-900 rounded-tl-xl border-b-2 border-gray-200">Feature</th>
-                <th class="p-4 text-center bg-gray-100 text-gray-900 border-b-2 border-gray-200">Paper/Phone</th>
-                <th class="p-4 text-center bg-blue-100 text-blue-900 font-bold border-b-2 border-blue-200">Schedulink</th>
-                <th class="p-4 text-center bg-gray-100 text-gray-900 rounded-tr-xl border-b-2 border-gray-200">Other Software</th>
+                <th class="p-4 text-left bg-tech/5 text-text rounded-tl-xl border-b-2 border-tech/20 font-primary">Feature</th>
+                <th class="p-4 text-center bg-tech/5 text-text border-b-2 border-tech/20 font-primary">Manual SQL</th>
+                <th class="p-4 text-center bg-tech/5 text-text border-b-2 border-tech/20 font-primary">Other AI Tools</th>
+                <th class="p-4 text-center bg-gradient-to-r from-primary to-tech text-white rounded-tr-xl border-b-2 border-tech/20 font-primary">Quick2query</th>
               </tr>
             </thead>
             <tbody>
-              <tr class="feature-row border-b border-gray-200">
-                <td class="p-4 font-medium border-r border-gray-200">Automated Reminders</td>
-                <td class="p-4 text-center border-r border-gray-200">
+              <tr class="feature-row">
+                <td class="p-4 text-text font-secondary border-b border-tech/20">Natural Language Support</td>
+                <td class="p-4 text-center border-b border-tech/20">
                   <svg class="w-5 h-5 mx-auto text-red-500" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"></path>
                   </svg>
                 </td>
-                <td class="p-4 text-center bg-blue-50 border-r border-blue-200">
-                  <span class="inline-flex items-center justify-center text-blue-600 font-semibold">
+                <td class="p-4 text-center border-b border-tech/20">
+                  <span class="text-yellow-500 font-medium">Basic</span>
+                </td>
+                <td class="p-4 text-center border-b border-tech/20 bg-primary/5">
+                  <span class="inline-flex items-center justify-center text-primary font-semibold">
                     <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
                     </svg>
-                    SMS, Email & Voice
+                    Advanced
                   </span>
                 </td>
-                <td class="p-4 text-center text-yellow-600">Limited</td>
               </tr>
-              <tr class="feature-row border-b border-gray-200">
-                <td class="p-4 font-medium border-r border-gray-200">Insurance Verification</td>
-                <td class="p-4 text-center border-r border-gray-200">
-                  <span class="text-red-600 font-medium">Manual</span>
+              <tr class="feature-row">
+                <td class="p-4 text-text font-secondary border-b border-tech/20">Context Understanding</td>
+                <td class="p-4 text-center border-b border-tech/20">
+                  <svg class="w-5 h-5 mx-auto text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"></path>
+                  </svg>
                 </td>
-                <td class="p-4 text-center bg-blue-50 border-r border-blue-200">
-                  <span class="inline-flex items-center justify-center text-blue-600 font-semibold">
+                <td class="p-4 text-center border-b border-tech/20">
+                  <svg class="w-5 h-5 mx-auto text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"></path>
+                  </svg>
+                </td>
+                <td class="p-4 text-center border-b border-tech/20 bg-primary/5">
+                  <span class="inline-flex items-center justify-center text-primary font-semibold">
+                    <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                    </svg>
+                    Full Context
+                  </span>
+                </td>
+              </tr>
+              <tr class="feature-row">
+                <td class="p-4 text-text font-secondary border-b border-tech/20">Query Optimization</td>
+                <td class="p-4 text-center border-b border-tech/20">
+                  <span class="text-yellow-500 font-medium">Manual</span>
+                </td>
+                <td class="p-4 text-center border-b border-tech/20">
+                  <span class="text-yellow-500 font-medium">Basic</span>
+                </td>
+                <td class="p-4 text-center border-b border-tech/20 bg-primary/5">
+                  <span class="inline-flex items-center justify-center text-primary font-semibold">
                     <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
                     </svg>
                     Automated
                   </span>
                 </td>
-                <td class="p-4 text-center text-yellow-600">Basic</td>
-              </tr>
-              <tr class="feature-row border-b border-gray-200">
-                <td class="p-4 font-medium border-r border-gray-200">Multi-Location Support</td>
-                <td class="p-4 text-center border-r border-gray-200">
-                  <svg class="w-5 h-5 mx-auto text-red-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"></path>
-                  </svg>
-                </td>
-                <td class="p-4 text-center bg-blue-50 border-r border-blue-200">
-                  <span class="inline-flex items-center justify-center text-blue-600 font-semibold">
-                    <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
-                    </svg>
-                    Unlimited
-                  </span>
-                </td>
-                <td class="p-4 text-center text-yellow-600">Extra Cost</td>
-              </tr>
-              <tr class="feature-row border-b border-gray-200">
-                <td class="p-4 font-medium border-r border-gray-200">Real-time Analytics</td>
-                <td class="p-4 text-center border-r border-gray-200">
-                  <svg class="w-5 h-5 mx-auto text-red-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"></path>
-                  </svg>
-                </td>
-                <td class="p-4 text-center bg-blue-50 border-r border-blue-200">
-                  <span class="inline-flex items-center justify-center text-blue-600 font-semibold">
-                    <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
-                    </svg>
-                    Comprehensive
-                  </span>
-                </td>
-                <td class="p-4 text-center text-yellow-600">Basic Reports</td>
               </tr>
               <tr class="feature-row">
-                <td class="p-4 font-medium border-r border-gray-200">HIPAA Compliance</td>
-                <td class="p-4 text-center border-r border-gray-200">
-                  <span class="text-red-600 font-medium">Risk</span>
+                <td class="p-4 text-text font-secondary border-b border-tech/20">Database Compatibility</td>
+                <td class="p-4 text-center border-b border-tech/20">
+                  <span class="text-yellow-500 font-medium">Limited</span>
                 </td>
-                <td class="p-4 text-center bg-blue-50 border-r border-blue-200">
-                  <span class="inline-flex items-center justify-center text-blue-600 font-semibold">
+                <td class="p-4 text-center border-b border-tech/20">
+                  <span class="text-yellow-500 font-medium">Single Type</span>
+                </td>
+                <td class="p-4 text-center border-b border-tech/20 bg-primary/5">
+                  <span class="inline-flex items-center justify-center text-primary font-semibold">
                     <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
                     </svg>
-                    Certified
+                    Multi-DB
                   </span>
                 </td>
-                <td class="p-4 text-center text-green-600">
-                  <svg class="w-5 h-5 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
-                  </svg>
+              </tr>
+              <tr class="feature-row">
+                <td class="p-4 text-text font-secondary">Enterprise Security</td>
+                <td class="p-4 text-center">
+                  <span class="text-red-500 font-medium">High Risk</span>
+                </td>
+                <td class="p-4 text-center">
+                  <span class="text-yellow-500 font-medium">Basic</span>
+                </td>
+                <td class="p-4 text-center bg-primary/5">
+                  <span class="inline-flex items-center justify-center text-primary font-semibold">
+                    <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path>
+                    </svg>
+                    Bank-Grade
+                  </span>
                 </td>
               </tr>
             </tbody>

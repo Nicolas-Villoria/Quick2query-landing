@@ -4,52 +4,52 @@ import BackgroundGradient from "./BackgroundGradient";
 
 const testimonials = [
   {
-    name: "Dr. Rachel Martinez",
-    role: "Chief of Emergency Medicine",
-    initials: "DR",
-    color: "bg-blue-500",
-    content: "Schedulink transformed our department's scheduling chaos into a well-oiled machine. The automated guard duty assignments are fair and transparent, and our staff satisfaction has increased dramatically."
+    name: "Carlos Rodríguez",
+    role: "Data Science Manager",
+    initials: "CR",
+    color: "bg-primary",
+    content: "Quick2query has transformed the way we interact with our databases. Our business analysts can now gain valuable insights without constantly relying on the technical team."
   },
   {
-    name: "Michael Johnson",
-    role: "Nursing Director",
-    initials: "MJ",
-    color: "bg-red-500",
-    content: "The holiday planning feature is a game-changer. We can now coordinate time off requests months in advance while ensuring we always have adequate coverage. It's eliminated so much stress."
+    name: "Ana Martínez",
+    role: "CTO",
+    initials: "AM",
+    color: "bg-tech",
+    content: "The API for translating natural language queries into SQL is impressive. It has reduced our development times by 60% and significantly improved our team's efficiency."
   },
   {
-    name: "Sarah Chen",
-    role: "Department Administrator",
-    initials: "SC",
-    color: "bg-green-500",
-    content: "As a department administrator, the compliance features give me peace of mind. Everything is documented, auditable, and meets our regulatory requirements. It's saved us countless hours."
+    name: "Diego Sánchez",
+    role: "Business Intelligence Analyst",
+    initials: "DS",
+    color: "bg-accent",
+    content: "As a Business Intelligence Analyst, Quick2query allows me to focus on strategic analysis instead of writing complex SQL queries. The conversational interface is intuitive, and the results are consistently accurate."
   }
 ];
 ---
 
-<section id="testimonials" class="relative isolate min-h-screen flex flex-col justify-center bg-gradient-to-b from-gray-50/80 to-white/80 dotted-bg py-24">
+<section id="testimonials" class="relative isolate min-h-screen flex flex-col justify-center bg-gradient-to-b from-neutral to-white dotted-bg py-24">
   <BackgroundGradient />
   <div class="container-custom">
     <div class="text-center mb-20">
-      <h2 class="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">Trusted by Medical Professionals</h2>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-        See what healthcare leaders are saying about Schedulink's impact on their departments.
+      <h2 class="text-5xl lg:text-6xl font-bold text-indigo-950 mb-6 font-primary">Businesses That Trust Us</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-secondary">
+        Find out how Quick2query is transforming data analysis in leading companies.
       </p>
     </div>
     
     <div class="grid lg:grid-cols-3 gap-12">
       {testimonials.map((testimonial, index) => (
-        <div class={`rounded-3xl ring-1 ring-gray-900/10 relative transition-all duration-300 p-8 bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl hover:scale-105 ${
+        <div class={`rounded-3xl ring-1 ring-gray-900/10 relative transition-all duration-300 p-8 bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl hover:scale-105 ${
           index % 2 === 0 ? 'rotate-1' : '-rotate-1'
         } hover:rotate-0`}>
           <div class="mb-6">
-            <p class="text-gray-600 text-lg leading-relaxed italic">
+            <p class="text-text text-lg leading-relaxed font-secondary">
               "{testimonial.content}"
             </p>
           </div>
           
           <div class="flex items-center">
-            <div class={`w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center mr-4 shadow-md`}>
+            <div class={`w-12 h-12 bg-indigo-950 rounded-xl flex items-center justify-center mr-4 shadow-md`}>
               <span class="text-white font-bold text-lg">{testimonial.initials}</span>
             </div>
             <div>

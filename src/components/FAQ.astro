@@ -2,28 +2,28 @@
 // FAQ section component
 const faqs = [
   {
-    question: "How does Schedulink ensure fair scheduling?",
-    answer: "Schedulink uses advanced algorithms that consider multiple factors including staff preferences, previous assignments, availability, and workload distribution. The system tracks historical data to ensure no one is consistently assigned undesirable shifts, promoting fairness and transparency across your department."
+    question: "How accurate is Quick2query's natural language to SQL translation?",
+    answer: "Quick2query utilizes advanced AI models achieving over 95% accuracy in SQL translation. Our system continuously learns from usage patterns and validates queries before execution to ensure data integrity. The AI understands complex business context and can handle nested queries, joins, and advanced SQL operations with high precision."
   },
   {
-    question: "Is Schedulink HIPAA compliant?",
-    answer: "Yes, Schedulink is fully HIPAA compliant. We implement enterprise-grade security measures including end-to-end encryption, secure data centers, regular security audits, and comprehensive access controls. All staff data is protected according to the highest healthcare industry standards."
+    question: "What databases does Quick2query support?",
+    answer: "We support all major SQL databases including PostgreSQL, MySQL, Microsoft SQL Server, Oracle, and SQLite. Our API provides consistent results across different database systems while optimizing queries for each specific database engine's capabilities and syntax variations."
   },
   {
-    question: "How quickly can we implement Schedulink?",
-    answer: "Most departments are up and running within a week. Our implementation team works closely with you to import existing schedules, configure department-specific rules, and train your staff. We provide comprehensive onboarding support to ensure a smooth transition."
+    question: "How secure is Quick2query with sensitive data?",
+    answer: "Security is our top priority. We implement enterprise-grade security measures including end-to-end encryption, role-based access control, and detailed audit logging. Our API never stores your data - it only processes queries and returns results. We're SOC 2 Type II certified and comply with GDPR and other data protection regulations."
   },
   {
-    question: "Can Schedulink integrate with our existing systems?",
-    answer: "Yes, Schedulink offers robust API integration capabilities and works with most major hospital information systems, payroll systems, and HR platforms. Our Professional and Enterprise plans include custom integration support to seamlessly connect with your existing workflow."
+    question: "Can Quick2query integrate with our existing data tools?",
+    answer: "Yes, Quick2query offers robust REST API integration capabilities and works seamlessly with popular BI tools, data visualization platforms, and custom applications. We provide comprehensive SDKs for major programming languages and detailed documentation to ensure smooth integration with your existing data stack."
   },
   {
-    question: "What kind of support do you provide?",
-    answer: "We provide 24/7 support for all plans because we understand that medical departments never sleep. Our support team includes healthcare scheduling experts who understand your unique challenges. Enterprise customers get dedicated account managers and priority response times."
+    question: "What kind of support and SLA do you provide?",
+    answer: "We provide 24/7 technical support with 99.9% uptime SLA for all enterprise plans. Our support team includes both AI and database experts who understand complex data challenges. Enterprise customers get dedicated solution architects and priority response times under 1 hour."
   },
   {
-    question: "Is there a free trial available?",
-    answer: "Yes, we offer a 30-day free trial for all plans with no credit card required. This gives you full access to all features so you can see firsthand how MedSync can transform your department's scheduling process. Our team is available to help you get the most out of your trial."
+    question: "How can we try Quick2query?",
+    answer: "We offer a free API key with 100 queries/month to test our service. For businesses, we provide a 14-day full-access trial with unlimited queries and all enterprise features. Our team will help you set up a proof-of-concept with your actual data to demonstrate the value Quick2query can bring to your organization."
   }
 ];
 ---
@@ -31,23 +31,23 @@ const faqs = [
 <section id="faq" class="section-padding bg-white py-24">
   <div class="container-custom">
     <div class="text-center mb-20">
-      <h2 class="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-        Get answers to common questions about Schedulink and how it can transform your department.
+      <h2 class="text-5xl lg:text-6xl font-bold text-indigo-950 mb-6 font-primary">Common Questions About Our API</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-secondary">
+        Learn more about Quick2query's natural language to SQL capabilities and how it can transform your data analysis workflow.
       </p>
     </div>
     
     <div class="max-w-4xl mx-auto space-y-4">
       {faqs.map((faq, index) => (
-        <div class="faq-item bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+        <div class="faq-item bg-white border border-background rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
           <button class="faq-question w-full text-left">
-            <span class="text-xl font-bold text-gray-900">{faq.question}</span>
-            <svg class="faq-icon w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <span class="text-xl font-bold text-text font-primary">{faq.question}</span>
+            <svg class="faq-icon w-6 h-6 text-tech" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
           </button>
           <div class="faq-answer hidden">
-            <p class="text-gray-600 leading-relaxed text-lg">{faq.answer}</p>
+            <p class="text-text leading-relaxed text-lg font-secondary">{faq.answer}</p>
           </div>
         </div>
       ))}

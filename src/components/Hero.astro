@@ -3,14 +3,14 @@
 ---
 
 <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 to-white">
-  <!-- Heart Rate Background Animation -->
-  <div class="absolute inset-0 flex items-center justify-center opacity-30">
-    <div class="heart-rate">
-      <svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="400px" height="146px" viewBox="0 0 400 146" enable-background="new 0 0 400 146" xml:space="preserve">
-        <polyline fill="none" stroke="#ef4444" stroke-width="4" stroke-miterlimit="10" points="0,90.972 102.704,90.972 118.920,66.648 135.136,90.972 154.056,90.972 167.568,111.244 191.824,18 213.512,127.458 224.328,90.972 259.456,90.972 275.672,80.838 294.592,90.972 400,90.972"/>
-      </svg>
-      <div class="fade-in"></div>
-      <div class="fade-out"></div>
+  <!-- Code Pattern Background Animation -->
+  <div class="absolute inset-0 flex items-center justify-center opacity-20">
+    <div class="code-pattern">
+      <div class="grid grid-cols-12 gap-4">
+        {Array(24).fill(0).map(() => (
+          <div class="h-2 bg-tech rounded-full transform transition-all duration-500"></div>
+        ))}
+      </div>
     </div>
   </div>
 
@@ -18,14 +18,14 @@
     <div class="grid lg:grid-cols-2 gap-12 items-center">
       <!-- Left Content -->
       <div class="text-center lg:text-left">
-        <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-          Keep your team in
-          <span class="bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent">
-            Rhythm
+        <h1 class="text-5xl lg:text-6xl font-bold text-indigo-950 mb-6 leading-tight font-primary">
+          From Natural Language
+          <span class="bg-gradient-to-r from-tech to-primary bg-clip-text text-transparent">
+            to SQL with AI
           </span>
         </h1>
-        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-          Reliable scheduling for medical departments, done with precision.
+        <p class="text-xl text-gray-600 mb-8 leading-relaxed font-secondary">
+          Powerful API that transforms natural language into precise SQL queries, enabling seamless data access without technical expertise.
         </p>
         
         <!-- Pill CTA Buttons -->
@@ -54,7 +54,7 @@
         <div class="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md border border-gray-100">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <h3 class="text-lg font-semibold text-gray-900">Schedule Preview</h3>
+              <h3 class="text-lg font-semibold text-gray-900">Vista previa</h3>
               <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
             </div>
             <div class="space-y-3">

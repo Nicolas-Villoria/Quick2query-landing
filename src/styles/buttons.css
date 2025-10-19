@@ -27,7 +27,7 @@
   }
 
   .blue-pill {
-    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    background: linear-gradient(135deg, #00B3A4, #6C63FF);
     color: white;
     box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
   }
@@ -90,24 +90,19 @@
 
   /* Standard Button Styles */
   .btn-primary {
-    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    background: linear-gradient(135deg, #00B3A4, #6C63FF);
     color: white;
-    padding: 12px 24px;
-    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.8rem;
     font-weight: 600;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 179, 164, 0.1);
   }
 
   .btn-primary:hover {
-    background: linear-gradient(135deg, #1d4ed8, #1e40af);
+    background: linear-gradient(135deg, #00E0E0, #6C63FF);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 6px 8px rgba(0, 179, 164, 0.2);
   }
 
   .btn-secondary {

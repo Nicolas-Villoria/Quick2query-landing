@@ -1,23 +1,31 @@
 /* CSS Custom Properties for better maintainability */
 :root {
   /* Colors */
-  --color-primary-50: #eff6ff;
-  --color-primary-100: #dbeafe;
-  --color-primary-500: #3b82f6;
-  --color-primary-600: #2563eb;
-  --color-primary-900: #1e3a8a;
+  --color-primary: #00B3A4;  /* Verde Azulado - Color corporativo */
+  --color-accent: #00E0E0;   /* Cian Brillante - Acentos / Botones */
+  --color-background: #AEEBFF; /* Azul Claro - Fondos / Gráficos */
+  --color-tech: #6C63FF;     /* Morado Tecnológico - IA / Titulares */
+  --color-neutral: #F5F7FA;  /* Gris Neutro - Fondos */
+  --color-text: #011335;     /* Negro Suave - Texto principal */
   
-  --color-secondary-500: #ef4444;
-  --color-secondary-600: #dc2626;
+  /* Legacy color mappings for compatibility */
+  --color-primary-50: var(--color-neutral);
+  --color-primary-100: var(--color-background);
+  --color-primary-500: var(--color-primary);
+  --color-primary-600: var(--color-tech);
+  --color-primary-900: var(--color-text);
   
-  --color-success-500: #10b981;
-  --color-success-600: #059669;
+  --color-secondary-500: var(--color-accent);
+  --color-secondary-600: var(--color-tech);
   
-  --color-gray-50: #f9fafb;
-  --color-gray-100: #f3f4f6;
-  --color-gray-500: #6b7280;
-  --color-gray-600: #4b5563;
-  --color-gray-900: #111827;
+  --color-success-500: var(--color-primary);
+  --color-success-600: var(--color-primary);
+  
+  --color-gray-50: var(--color-neutral);
+  --color-gray-100: var(--color-neutral);
+  --color-gray-500: var(--color-text);
+  --color-gray-600: var(--color-text);
+  --color-gray-900: var(--color-text);
   
   /* Spacing */
   --spacing-xs: 0.25rem;
