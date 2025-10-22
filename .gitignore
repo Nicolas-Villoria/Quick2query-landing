@@ -1,24 +1,91 @@
-# build output
+# Build output
 dist/
-
-# generated types
+.output/
 .astro/
+.vercel/
+.netlify/
+.cloudflare/
 
-# dependencies
+# Dependencies
 node_modules/
+.pnpm-store/
+.npm/
+.yarn/
 
-# logs
+# Generated types
+.astro/
+*.tsbuildinfo
+
+# Logs
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+lerna-debug.log*
 
-# environment variables
+# Environment variables
 .env
-.env.production
+.env.*
+!.env.example
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 # macOS-specific files
 .DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
 
-# jetbrains setting folder
-.idea/
+# Thumbnails
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Cache and temporary files
+.cache/
+.temp/
+*.tmp
+*.temp
+.DS_Store
+*.pem
+
+# Coverage directory
+coverage/
+.nyc_output/
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+
+# Local Netlify folder
+.netlify
+
+# Test files
+*.test.js.snap
+__snapshots__/
+
+# Lock files (keep pnpm-lock.yaml since you're using pnpm)
+package-lock.json
+yarn.lock
+
+# Optional: Large media files (if you have any)
+*.mp4
+*.mov
+*.wav
+*.flv
+*.avi
+# Remove the above video exclusions if you want to track demo videos in the repo
