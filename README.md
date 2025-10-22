@@ -1,21 +1,23 @@
-# Schedulink Landing Page 🏥
+# Quick2query Landing Page 🚀
 
-A modern, responsive landing page for Schedulink - the next-generation medical scheduling platform designed specifically for healthcare providers.
+A modern, responsive landing page for Quick2query - the cutting-edge Natural Language to SQL API platform that transforms plain English into optimized database queries.
 
 ## ✨ Features
 
-- **Modern Design**: Clean, professional medical-themed interface
-- **Responsive**: Fully responsive design optimized for all devices
-- **Fast Performance**: Built with Astro for optimal loading speeds
-- **Interactive Components**: React components for enhanced user experience
-- **Medical Focus**: Tailored specifically for healthcare scheduling needs
+- **Modern Tech Interface**: Clean, professional tech-focused design with code syntax highlighting
+- **Interactive Demo**: Live API playground with real-time query transformation
+- **Responsive Design**: Optimized viewing experience across all devices
+- **Fast Performance**: Built with Astro for lightning-fast page loads
+- **Video Showcase**: Interactive video demonstrations with expandable view
 
 ## 🏗️ Tech Stack
 
-- **Framework**: Astro 5.12.7 with static site generation
-- **Styling**: Tailwind CSS 3.4.17 for responsive design
-- **Components**: React 19.1.1 for interactive elements
-- **Deployment**: Optimized for Cloudflare Pages, Netlify, and Vercel
+- **Framework**: Astro with static site generation
+- **Styling**: TailwindCSS for modern, responsive design
+- **Components**: React for interactive elements and API playground
+- **Video Player**: Custom video player with expandable view
+- **Animations**: GSAP for smooth transitions and interactions
+- **Deployment**: Optimized for Cloudflare Pages with proper asset handling
 
 ## 🚀 Project Structure
 
@@ -55,14 +57,15 @@ A modern, responsive landing page for Schedulink - the next-generation medical s
 └── package.json
 ```
 
-## 🏥 Pages Overview
+## � Pages Overview
 
-- **Homepage** (`/`): Hero section with main value proposition and feature highlights
-- **Features** (`/features`): Comprehensive overview of medical scheduling capabilities
-- **Pricing** (`/pricing`): Transparent pricing plans for healthcare providers
-- **Story** (`/story`): The journey and mission behind Schedulink
-- **Contact** (`/contact`): Get in touch and request demos
-- **Sign In** (`/signin`): User authentication portal
+- **Homepage** (`/`): Hero section showcasing natural language to SQL transformation
+- **Features** (`/features`): Comprehensive overview of AI query capabilities and database support
+- **Pricing** (`/pricing`): Flexible API pricing plans for different usage levels
+- **Story** (`/story`): Our journey in revolutionizing database interactions
+- **Contact** (`/contact`): Get in touch for enterprise solutions
+- **Documentation** (`/docs`): Detailed API documentation and guides
+- **Sign In** (`/signin`): API dashboard access
 
 ## 🧞 Commands
 
@@ -81,8 +84,8 @@ All commands are run from the root of the project, from a terminal:
 
 1. **Clone the repository**
    ```sh
-   git clone https://github.com/Nicolas-Villoria/schedulink-landing.git
-   cd schedulink-landing
+   git clone https://github.com/Nicolas-Villoria/quick2query-landing.git
+   cd quick2query-landing
    ```
 
 2. **Install dependencies**
@@ -97,6 +100,39 @@ All commands are run from the root of the project, from a terminal:
 
 4. **Open your browser**
    Navigate to `http://localhost:4321` to see the site
+
+## 🎨 Brand Identity
+
+- **Primary Color**: `#00B3A4` - Modern tech teal
+- **Accent Color**: `#00E0E0` - Electric blue
+- **Tech Color**: `#6C63FF` - Dynamic purple
+- **Background**: `#AEEBFF` - Soft sky blue
+- **Typography**:
+  - Headers: Roboto (Clean, modern)
+  - Body: Inter (Highly readable)
+
+## 💻 Development Notes
+
+### Video Integration
+The site features an interactive video demo. Make sure the video file (`prototype_v2.mp4`) is placed in the `public` directory. The video player includes:
+- Expandable full-screen view
+- Custom playback controls
+- Synchronized playback between views
+- Optimized loading for better performance
+
+### Asset Handling
+When deploying to Cloudflare Pages, ensure:
+1. All assets are in the `public` directory
+2. Use absolute paths for assets (e.g., `/images/logo.png`)
+3. Proper cache headers are set for static assets
+4. Images are optimized for web delivery
+
+### API Documentation
+The documentation section uses:
+- Syntax highlighting for code examples
+- Interactive API playground
+- Real-time query transformation demos
+- Response visualization tools
 
 ## 🌐 Deployment
 
