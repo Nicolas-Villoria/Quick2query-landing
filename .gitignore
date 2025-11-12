@@ -82,10 +82,15 @@ __snapshots__/
 package-lock.json
 yarn.lock
 
-# Optional: Large media files (if you have any)
-*.mp4
-*.mov
-*.wav
-*.flv
-*.avi
-# Remove the above video exclusions if you want to track demo videos in the repo
+# Wrangler local state
+.wrangler/
+.dev.vars
+wrangler.toml.local
+
+# Optional: Large media files (if you have large videos to exclude)
+# *.mp4
+# *.mov
+# *.wav
+# *.flv
+# *.avi
+# Note: prototype_v2.mp4 should be committed for the demo to work on deployed site
