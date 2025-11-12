@@ -5,13 +5,13 @@ import Footer from '../components/Footer.astro';
 import HeroSection from '../components/HeroSection.jsx';
 ---
 
-<Layout title="Privacy Policy - Schedulink">
+<Layout title="Privacy Policy - Quick2query">
   <Header />
   <main class="min-h-screen bg-gray-50">
     <HeroSection 
       title="Privacy"
       highlight="Policy"
-      subtitle="Your privacy and the security of your medical information is our top priority"
+      subtitle="Your privacy and the security of your data is our top priority"
       client:load
     />
 
@@ -24,23 +24,23 @@ import HeroSection from '../components/HeroSection.jsx';
           <div class="mb-12">
             <h2 class="text-2xl font-bold text-gray-900 mb-4">Introduction</h2>
             <p class="text-gray-600 leading-relaxed mb-4">
-              Schedulink ("we," "our," or "us") is committed to protecting your privacy and ensuring the security of your personal and medical information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our medical scheduling platform and related services.
+              Quick2query is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our natural language to SQL API platform and related services.
             </p>
             <p class="text-gray-600 leading-relaxed">
-              This policy applies to all users of our platform, including healthcare providers, patients, and administrative staff. By using Schedulink, you consent to the practices described in this Privacy Policy.
+              This policy applies to all users of our platform, including developers, businesses, and organizations. By using Quick2query, you consent to the practices described in this Privacy Policy.
             </p>
           </div>
 
-          <!-- HIPAA Compliance -->
-          <div class="mb-12 bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg">
+          <!-- GDPR Compliance -->
+          <div class="mb-12 bg-blue-50 border-l-4 border-tech p-6 rounded-r-lg">
             <h2 class="text-2xl font-bold text-blue-900 mb-4 flex items-center">
               <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
               </svg>
-              HIPAA Compliance
+              GDPR Compliance
             </h2>
             <p class="text-blue-800 leading-relaxed">
-              Schedulink is fully compliant with the Health Insurance Portability and Accountability Act (HIPAA) and implements appropriate administrative, physical, and technical safeguards to protect your Protected Health Information (PHI). We maintain Business Associate Agreements (BAAs) with all healthcare providers using our platform.
+              Quick2query is fully compliant with the General Data Protection Regulation (GDPR) and implements appropriate administrative, physical, and technical safeguards to protect your personal data. We respect your rights as a data subject and provide mechanisms to exercise those rights.
             </p>
           </div>
 
@@ -52,22 +52,21 @@ import HeroSection from '../components/HeroSection.jsx';
               <div>
                 <h3 class="text-xl font-semibold text-gray-800 mb-3">Personal Information</h3>
                 <ul class="list-disc list-inside text-gray-600 space-y-2">
-                  <li>Name, email address, phone number, and mailing address</li>
-                  <li>Date of birth and demographic information</li>
-                  <li>Emergency contact information</li>
-                  <li>Insurance information and payment details</li>
-                  <li>Professional credentials (for healthcare providers)</li>
+                  <li>Name, email address, and company information</li>
+                  <li>Account credentials and authentication data</li>
+                  <li>Payment information and billing details</li>
+                  <li>Communication preferences</li>
                 </ul>
               </div>
 
               <div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-3">Medical Information</h3>
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Usage Information</h3>
                 <ul class="list-disc list-inside text-gray-600 space-y-2">
-                  <li>Medical history and current health conditions</li>
-                  <li>Medication lists and allergies</li>
-                  <li>Appointment notes and treatment records</li>
-                  <li>Test results and diagnostic information</li>
-                  <li>Referral information and care coordination data</li>
+                  <li>Natural language queries submitted to our API</li>
+                  <li>Generated SQL queries and results</li>
+                  <li>API usage metrics and token consumption</li>
+                  <li>Database connection configurations (metadata only)</li>
+                  <li>Query performance and optimization data</li>
                 </ul>
               </div>
 
@@ -75,9 +74,10 @@ import HeroSection from '../components/HeroSection.jsx';
                 <h3 class="text-xl font-semibold text-gray-800 mb-3">Technical Information</h3>
                 <ul class="list-disc list-inside text-gray-600 space-y-2">
                   <li>IP address, browser type, and device information</li>
-                  <li>Usage data and platform interactions</li>
-                  <li>Location data (for appointment reminders and directions)</li>
+                  <li>API keys and access tokens</li>
+                  <li>Usage patterns and platform interactions</li>
                   <li>Cookies and similar tracking technologies</li>
+                  <li>Error logs and debugging information</li>
                 </ul>
               </div>
             </div>
@@ -89,13 +89,14 @@ import HeroSection from '../components/HeroSection.jsx';
             
             <div class="grid md:grid-cols-2 gap-6">
               <div class="bg-green-50 p-6 rounded-lg border border-green-200">
-                <h3 class="text-lg font-semibold text-green-800 mb-3">Healthcare Operations</h3>
+                <h3 class="text-lg font-semibold text-green-800 mb-3">Service Operations</h3>
                 <ul class="text-green-700 space-y-2 text-sm">
-                  <li>• Schedule and manage appointments</li>
-                  <li>• Facilitate patient-provider communication</li>
-                  <li>• Send appointment reminders and notifications</li>
-                  <li>• Process insurance verification and billing</li>
-                  <li>• Coordinate care between providers</li>
+                  <li>• Process natural language queries</li>
+                  <li>• Generate and optimize SQL queries</li>
+                  <li>• Manage API authentication and access</li>
+                  <li>• Process billing and payments</li>
+                  <li>• Provide customer support</li>
+                  <li>• Send service notifications and updates</li>
                 </ul>
               </div>
 
@@ -103,8 +104,8 @@ import HeroSection from '../components/HeroSection.jsx';
                 <h3 class="text-lg font-semibold text-purple-800 mb-3">Platform Improvement</h3>
                 <ul class="text-purple-700 space-y-2 text-sm">
                   <li>• Analyze usage patterns and performance</li>
-                  <li>• Develop new features and services</li>
-                  <li>• Provide customer support</li>
+                  <li>• Train and improve AI models</li>
+                  <li>• Develop new features and capabilities</li>
                   <li>• Ensure platform security and reliability</li>
                   <li>• Comply with legal and regulatory requirements</li>
                 </ul>
@@ -121,15 +122,7 @@ import HeroSection from '../components/HeroSection.jsx';
               
               <div class="space-y-4">
                 <div class="flex items-start">
-                  <div class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <div>
-                    <h4 class="font-semibold text-gray-800">With Your Healthcare Providers</h4>
-                    <p class="text-gray-600 text-sm">To facilitate your medical care and appointment scheduling</p>
-                  </div>
-                </div>
-                
-                <div class="flex items-start">
-                  <div class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div class="w-2 h-2 bg-tech rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <div>
                     <h4 class="font-semibold text-gray-800">With Your Consent</h4>
                     <p class="text-gray-600 text-sm">When you explicitly authorize us to share specific information</p>
@@ -137,7 +130,15 @@ import HeroSection from '../components/HeroSection.jsx';
                 </div>
                 
                 <div class="flex items-start">
-                  <div class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div class="w-2 h-2 bg-tech rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800">Service Providers</h4>
+                    <p class="text-gray-600 text-sm">With trusted third parties who help us operate our platform (cloud hosting, payment processing, analytics) under strict confidentiality agreements</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="w-2 h-2 bg-tech rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <div>
                     <h4 class="font-semibold text-gray-800">For Legal Compliance</h4>
                     <p class="text-gray-600 text-sm">When required by law, court order, or regulatory authority</p>
@@ -145,12 +146,18 @@ import HeroSection from '../components/HeroSection.jsx';
                 </div>
                 
                 <div class="flex items-start">
-                  <div class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div class="w-2 h-2 bg-tech rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <div>
-                    <h4 class="font-semibold text-gray-800">Service Providers</h4>
-                    <p class="text-gray-600 text-sm">With trusted third parties who help us operate our platform (under strict confidentiality agreements)</p>
+                    <h4 class="font-semibold text-gray-800">Business Transfers</h4>
+                    <p class="text-gray-600 text-sm">In connection with a merger, acquisition, or sale of assets (with notice provided)</p>
                   </div>
                 </div>
+              </div>
+              
+              <div class="mt-6 p-4 bg-orange-50 border border-orange-200 rounded">
+                <p class="text-orange-800 text-sm font-medium">
+                  <strong>Important:</strong> We do NOT access or store the actual data from your databases. We only process query metadata and generated SQL statements. Your database content remains entirely within your control.
+                </p>
               </div>
             </div>
           </div>
@@ -247,10 +254,28 @@ import HeroSection from '../components/HeroSection.jsx';
           <div class="mb-12">
             <h2 class="text-2xl font-bold text-gray-900 mb-4">Data Retention</h2>
             <p class="text-gray-600 leading-relaxed mb-4">
-              We retain your personal and medical information only for as long as necessary to provide our services and comply with legal requirements. Medical records are typically retained for a minimum of 7 years after your last appointment, in accordance with healthcare industry standards and regulatory requirements.
+              We retain your information only for as long as necessary to provide our services and comply with legal requirements:
             </p>
-            <p class="text-gray-600 leading-relaxed">
-              When data is no longer needed, we securely delete or anonymize it using industry-standard data destruction methods.
+            <ul class="space-y-2 text-gray-600 ml-6">
+              <li class="flex items-start">
+                <span class="text-tech mr-2">•</span>
+                <span><strong>Account Data:</strong> Retained while your account is active and for 30 days after account closure</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-tech mr-2">•</span>
+                <span><strong>Query Logs:</strong> Retained for 90 days for performance optimization and debugging</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-tech mr-2">•</span>
+                <span><strong>Usage Analytics:</strong> Anonymized and aggregated data may be retained indefinitely for service improvement</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-tech mr-2">•</span>
+                <span><strong>Billing Records:</strong> Retained for 7 years to comply with financial regulations</span>
+              </li>
+            </ul>
+            <p class="text-gray-600 leading-relaxed mt-4">
+              When data is no longer needed, we securely delete or anonymize it using industry-standard data destruction methods. You can request deletion of your data at any time by contacting us, subject to legal retention requirements.
             </p>
           </div>
 
@@ -272,11 +297,10 @@ import HeroSection from '../components/HeroSection.jsx';
               If you have questions about this Privacy Policy or wish to exercise your privacy rights, please contact us:
             </p>
             <div class="space-y-2 text-gray-700">
-              <p><strong>Email:</strong> privacy@schedulink.com</p>
-              <p><strong>Phone:</strong> 1-800-SCHEDULE (1-800-724-3385)</p>
-              <p><strong>Address:</strong> Schedulink Privacy Officer<br>
-                 123 Healthcare Technology Blvd<br>
-                 Medical District, CA 90210</p>
+              <p><strong>Email:</strong> <a href="mailto:quick2query@gmail.com" class="text-tech hover:text-primary transition-colors">quick2query@gmail.com</a></p>
+              <p class="text-gray-600 text-sm mt-2">
+                <strong>Response Time:</strong> We aim to respond to all privacy inquiries within 48 hours.
+              </p>
             </div>
           </div>
 
