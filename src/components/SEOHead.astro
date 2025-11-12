@@ -10,8 +10,8 @@ export interface Props {
 
 const { 
   title, 
-  description = "Reliable scheduling for medical departments, done with precision.",
-  image = "/assets/og-image.png",
+  description = "Turn natural language into SQL — AI-powered database queries, fast and accurate.",
+  image = "/public/logo.png",
   type = "website",
   canonicalURL = new URL(Astro.url.pathname, Astro.site)
 } = Astro.props;
@@ -35,7 +35,7 @@ const socialImage = new URL(image, Astro.site);
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={socialImage} />
-<meta property="og:site_name" content="Schedulink" />
+<meta property="og:site_name" content="Quick2query" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
@@ -46,7 +46,7 @@ const socialImage = new URL(image, Astro.site);
 
 <!-- Additional SEO -->
 <meta name="robots" content="index, follow" />
-<meta name="author" content="Schedulink" />
+<meta name="author" content="Quick2query" />
 <meta name="language" content="en" />
 <meta name="revisit-after" content="7 days" />
 
@@ -58,7 +58,7 @@ const socialImage = new URL(image, Astro.site);
 <script type="application/ld+json" set:html={JSON.stringify({
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Schedulink",
+  "name": "Quick2query",
   "url": Astro.site,
   "logo": new URL("/favicon.svg", Astro.site),
   "description": description,
@@ -68,8 +68,8 @@ const socialImage = new URL(image, Astro.site);
     "url": new URL("/contact", Astro.site)
   },
   "sameAs": [
-    "https://twitter.com/schedulink",
-    "https://linkedin.com/company/schedulink"
+    "https://x.com/Q2Query", 
+    "https://linkedin.com/company/quick2query" 
   ]
 })} />
 

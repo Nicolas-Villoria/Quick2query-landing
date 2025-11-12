@@ -1,8 +1,11 @@
 ---
 // Hero section component
+import BackgroundGradient from "./BackgroundGradient";
 ---
 
-<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+
+<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <BackgroundGradient client:load />
   <!-- Code Pattern Background Animation -->
   <div class="absolute inset-0 flex items-center justify-center opacity-20">
     <div class="code-pattern">
