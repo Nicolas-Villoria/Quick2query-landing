@@ -32,5 +32,5 @@ export default defineConfig({
   output: 'static',
   
   // Site configuration for better SEO
-  site: 'https://schedulink.com'
+  site: 'https://quick2query.com'
 });
