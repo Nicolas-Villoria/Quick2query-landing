@@ -57,9 +57,9 @@ const businessPlans = [
   },
 ];
 
-// ERP segment - custom pricing
-const erpPricing = {
-  name: "ERP",
+// API segment pricing
+const apiPricing = {
+  name: "API",
   description: "Custom solution with optimized model",
   tokenPricing: {
     input: "1.075",
@@ -213,7 +213,7 @@ const erpPricing = {
           <div class="grid grid-cols-3 gap-6">
             <div class="text-center">
               <div class="text-tech font-bold text-2xl">
-                €{erpPricing.tokenPricing.input}
+                €{apiPricing.tokenPricing.input}
               </div>
               <div class="text-gray-500 font-secondary text-sm mt-1">
                 Input / 1M tokens
@@ -221,7 +221,7 @@ const erpPricing = {
             </div>
             <div class="text-center">
               <div class="text-tech font-bold text-2xl">
-                €{erpPricing.tokenPricing.cached}
+                €{apiPricing.tokenPricing.cached}
               </div>
               <div class="text-gray-500 font-secondary text-sm mt-1">
                 Cached / 1M tokens
@@ -229,7 +229,7 @@ const erpPricing = {
             </div>
             <div class="text-center">
               <div class="text-tech font-bold text-2xl">
-                €{erpPricing.tokenPricing.output}
+                €{apiPricing.tokenPricing.output}
               </div>
               <div class="text-gray-500 font-secondary text-sm mt-1">
                 Output / 1M tokens
