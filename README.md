@@ -1,16 +1,20 @@
-# Quick2query Landing Page 🚀
+# Quick2query Landing Page
 
-A modern, responsive landing page for Quick2query - the cutting-edge Natural Language to SQL API platform that transforms plain English into optimized database queries.
+A professional, enterprise-focused landing page for Quick2query, the AI-powered Text-to-SQL API platform that empowers data teams to query databases using natural language.
 
-## ✨ Features
+## Overview
 
-- **Modern Tech Interface**: Clean, professional tech-focused design with code syntax highlighting
-- **Interactive Demo**: Live API playground with real-time query transformation
-- **Responsive Design**: Optimized viewing experience across all devices
-- **Fast Performance**: Built with Astro for lightning-fast page loads
-- **Video Showcase**: Interactive video demonstrations with expandable view
+Quick2query is a B2B SaaS platform providing production-ready API infrastructure for transforming natural language into optimized SQL queries. Built for modern data teams, analysts, and developers who need fast, accurate database access without complex query writing.
 
-## 🏗️ Tech Stack
+## Key Features
+
+- **Professional B2B Design**: Clean, minimal interface focused on enterprise credibility
+- **Live Demo Animation**: GSAP-powered chat demonstration showing real query transformations
+- **Performance-First**: Built with Astro for exceptional loading speeds
+- **Enterprise Messaging**: Positioned for technical decision-makers and data teams
+- **Conversion-Optimized**: Clear value propositions and strategic CTAs
+
+## Tech Stack
 
 - **Framework**: Astro with static site generation
 - **Styling**: TailwindCSS for modern, responsive design
@@ -19,7 +23,7 @@ A modern, responsive landing page for Quick2query - the cutting-edge Natural Lan
 - **Animations**: GSAP for smooth transitions and interactions
 - **Deployment**: Optimized for Cloudflare Pages with proper asset handling
 
-## 🚀 Project Structure
+## Project Structure
 
 ```text
 /
@@ -27,9 +31,6 @@ A modern, responsive landing page for Quick2query - the cutting-edge Natural Lan
 │   ├── favicon.svg
 │   └── assets/
 ├── src/
-│   ├── assets/
-│   │   ├── astro.svg
-│   │   └── background.svg
 │   ├── components/
 │   │   ├── CTA.astro
 │   │   ├── FAQ.astro
@@ -53,11 +54,12 @@ A modern, responsive landing page for Quick2query - the cutting-edge Natural Lan
 │       ├── global.css
 │       ├── animations.css
 │       ├── buttons.css
+|       ├── typography.css
 │       └── faq.css
 └── package.json
 ```
 
-## � Pages Overview
+## Pages Overview
 
 - **Homepage** (`/`): Hero section showcasing natural language to SQL transformation
 - **Features** (`/features`): Comprehensive overview of AI query capabilities and database support
@@ -67,41 +69,21 @@ A modern, responsive landing page for Quick2query - the cutting-edge Natural Lan
 - **Documentation** (`/docs`): Detailed API documentation and guides
 - **Sign In** (`/signin`): API dashboard access
 
-## 🧞 Commands
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
 | `pnpm install`            | Installs dependencies                            |
-| `pnpm dev`                | Starts local dev server at `localhost:4321`     |
+| `pnpm run dev`                | Starts local dev server at `localhost:4321`     |
 | `pnpm build`              | Build your production site to `./dist/`         |
 | `pnpm preview`            | Preview your build locally, before deploying    |
 | `pnpm astro ...`          | Run CLI commands like `astro add`, `astro check`|
 | `pnpm astro -- --help`    | Get help using the Astro CLI                    |
 
-## 🚀 Getting Started
 
-1. **Clone the repository**
-   ```sh
-   git clone https://github.com/Nicolas-Villoria/quick2query-landing.git
-   cd quick2query-landing
-   ```
-
-2. **Install dependencies**
-   ```sh
-   pnpm install
-   ```
-
-3. **Start development server**
-   ```sh
-   pnpm dev
-   ```
-
-4. **Open your browser**
-   Navigate to `http://localhost:4321` to see the site
-
-## 🎨 Brand Identity
+## Brand Identity
 
 - **Primary Color**: `#00B3A4` - Modern tech teal
 - **Accent Color**: `#00E0E0` - Electric blue
@@ -111,71 +93,14 @@ All commands are run from the root of the project, from a terminal:
   - Headers: Roboto (Clean, modern)
   - Body: Inter (Highly readable)
 
-## 💻 Development Notes
 
-### Video Integration
-The site features an interactive video demo. Make sure the video file (`prototype_v2.mp4`) is placed in the `public` directory. The video player includes:
-- Expandable full-screen view
-- Custom playback controls
-- Synchronized playback between views
-- Optimized loading for better performance
-
-### Asset Handling
-When deploying to Cloudflare Pages, ensure:
-1. All assets are in the `public` directory
-2. Use absolute paths for assets (e.g., `/images/logo.png`)
-3. Proper cache headers are set for static assets
-4. Images are optimized for web delivery
-
-### API Documentation
-The documentation section uses:
-- Syntax highlighting for code examples
-- Interactive API playground
-- Real-time query transformation demos
-- Response visualization tools
-
-## 🌐 Deployment
-
-This project is configured for deployment on multiple platforms:
-
-### Cloudflare Pages
-- Automatic deployments from GitHub
-- Build command: `pnpm install --no-frozen-lockfile && pnpm build`
-- Output directory: `dist`
-
-### Netlify
-- Build command: `pnpm build`
-- Publish directory: `dist`
-
-### Vercel
-- Framework preset: Astro
-- Build command: `pnpm build`
-- Output directory: `dist`
-
-## 🎨 Key Components
-
-### HeroSection.jsx (React)
-Reusable React component for hero sections across pages with:
-- Gradient backgrounds
-- Animated text elements
-- Responsive grid patterns
-- Customizable titles and content
-
-### Medical-Themed Features
-- **Smart Bookings**: AI-powered scheduling optimization
-- **Patient Management**: Comprehensive patient records
-- **Automated Reminders**: Reduce no-shows with smart notifications
-- **Multi-Location Support**: Manage multiple facilities
-- **Insurance Verification**: Real-time insurance checking
-- **Analytics Dashboard**: Insights and reporting tools
-
-## 🔧 Configuration
+##  Configuration
 
 - **Astro Config**: `astro.config.mjs` - Includes Tailwind and React integrations
 - **Tailwind Config**: `tailwind.config.mjs` - Custom content paths and configurations
 - **TypeScript**: `tsconfig.json` - Type checking configuration
 
-## 📱 Responsive Design
+## Responsive Design
 
 The site is fully responsive with breakpoints optimized for:
 - Mobile devices (320px+)
@@ -183,28 +108,28 @@ The site is fully responsive with breakpoints optimized for:
 - Desktop (1024px+)
 - Large screens (1280px+)
 
-## 🎯 SEO & Performance
+## SEO & Performance
 
 - Static site generation for optimal performance
 - Semantic HTML structure
 - Optimized images and assets
 - Fast loading times with Astro's zero-JS by default
 
-## 🔧 Cloudflare Deployment Fix
+## Cloudflare Deployment Fix
 
 If you encounter lockfile issues during Cloudflare deployment, the project includes:
 - Updated `pnpm-lock.yaml` compatible with all dependencies
 - Proper build configuration for static site generation
 - Optimized for Cloudflare Pages automatic deployments
 
-## 📄 License
+## License
 
 This project is part of the Quick2query platform and is licensed under the MIT License.
 
-## 🤝 Contributing
+## Contributing
 
 For contributions and feature requests, please contact the development team.
 
 ---
 
-Built with ❤️ for healthcare providers who deserve better scheduling solutions.
+
