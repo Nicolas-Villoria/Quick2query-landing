@@ -28,21 +28,19 @@ const features = [
 ];
 ---
 
-<section id="features" class="feature-grid py-24 bg-white">
-    <div class="container mx-auto px-4 sm:px-6">
-      <div class="text-center mb-20">
-          <h2 class="text-4xl lg:text-5xl font-bold text-indigo-950 mb-6">Enterprise-Grade Text-to-SQL</h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Production-ready API that transforms natural language into optimized database queries for modern data teams.
-          </p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {features.map(f => (
-          <div class="feature-card p-8 bg-white border-2 border-gray-200 rounded-xl hover:border-tech/40 transition-all duration-300">
-            <h3 class="text-xl font-bold text-gray-900 mb-3">{f.title}</h3>
-            <p class="text-gray-600 leading-relaxed">{f.description}</p>
-          </div>
-        ))}
-      </div>
+<section id="features" class="feature-grid py-24 bg-white mx-4">
+    <div class="text-center mb-20">
+        <h2 class="text-5xl lg:text-6xl font-bold text-indigo-950 mb-8">Built for Business Excellence</h2>
+        <p class="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            Streamline your department's operations with intelligent querying designed specifically for business professionals.
+        </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {features.map(f => (
+        <div class="feature-card p-6 bg-gray-50 rounded-lg shadow hover:shadow-md transition">
+          <h3 class="text-xl font-semibold">{f.title}</h3>
+          <p class="mt-2 text-gray-700">{f.description}</p>
+        </div>
+      ))}
     </div>
 </section>
