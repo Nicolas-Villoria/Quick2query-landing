@@ -83,7 +83,7 @@ const BackgroundGradient = () => {
       </div>
 
       {/* Overlay for texture/noise if desired, or just a subtle gradient to blend */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/40 to-white"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-white/0 to-white"></div>
     </div>
   );
 };
