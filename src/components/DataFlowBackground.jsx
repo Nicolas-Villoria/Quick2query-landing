@@ -13,7 +13,8 @@ const DataFlowBackground = () => {
     let scrollSpeed = 0;
 
     // Configuration
-    const particleCount = 60; // Number of particles
+    const particleDensity = 0.06; // Particles per pixel width
+    const particleCount = Math.floor(window.innerWidth * particleDensity); // Dynamic particle count
     const connectionDistance = 150; // Distance to connect
     const baseSpeed = 0.5;
     const colors = ["#00B3A4", "#6C63FF", "#00E0E0"]; // Primary, Tech, Accent
@@ -141,7 +142,10 @@ const DataFlowBackground = () => {
     };
 
     const handleScroll = () => {
-      scrollSpeed = window.scrollY;
+      // Limit scroll speed with dampening factor and max cap
+      const maxScrollEffect = 100; // Maximum scroll effect
+      const dampeningFactor = 0.1; // Reduces the scroll impact
+      scrollSpeed = Math.min(window.scrollY * dampeningFactor, maxScrollEffect);
     };
 
     window.addEventListener("resize", resizeCanvas);
