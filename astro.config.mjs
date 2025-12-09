@@ -12,6 +12,11 @@ export default defineConfig({
     // Optimize CSS
     inlineStylesheets: 'auto',
   },
+
+  // Server configuration
+  server: {
+    host: true // This binds to 0.0.0.0 automatically
+  },
   
   // Image optimization
   image: {

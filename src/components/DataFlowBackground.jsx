@@ -11,6 +11,8 @@ const DataFlowBackground = () => {
     let particles = [];
     let mouse = { x: -1000, y: -1000 };
     let scrollSpeed = 0;
+    let isTouching = false; // Track if user is actively touching
+    let lastTouchTime = 0; // Track last touch time to ignore emulated mouse events
 
     // Configuration
     const particleDensity = 0.06; // Particles per pixel width
@@ -37,7 +39,8 @@ const DataFlowBackground = () => {
       }
 
       update() {
-        // Mouse interaction (Repel/Attract)
+        // Mouse/Touch interaction (Repel/Attract)
+        // Only apply force if touching (on mobile) or always (on desktop with mouse)
         const dx = mouse.x - this.x;
         const dy = mouse.y - this.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
@@ -46,8 +49,8 @@ const DataFlowBackground = () => {
         const maxDistance = 300;
         const force = (maxDistance - distance) / maxDistance;
 
-        if (distance < maxDistance) {
-          // Attract towards mouse (Data Query effect)
+        if (distance < maxDistance && isTouching) {
+          // Attract towards mouse/touch (Data Query effect)
           this.vx += forceDirectionX * force * 0.5;
           this.vy += forceDirectionY * force * 0.5;
         }
@@ -136,9 +139,39 @@ const DataFlowBackground = () => {
 
     // Event Listeners
     const handleMouseMove = (e) => {
+      // Ignore mouse events if they are likely emulated from touch
+      if (Date.now() - lastTouchTime < 500) return;
+
       const rect = canvas.getBoundingClientRect();
       mouse.x = e.clientX - rect.left;
       mouse.y = e.clientY - rect.top;
+      isTouching = true; // Desktop mouse is always "touching"
+    };
+
+    const handleTouchStart = (e) => {
+      lastTouchTime = Date.now();
+      isTouching = true;
+      const rect = canvas.getBoundingClientRect();
+      const touch = e.touches[0];
+      mouse.x = touch.clientX - rect.left;
+      mouse.y = touch.clientY - rect.top;
+    };
+
+    const handleTouchMove = (e) => {
+      if (isTouching) {
+        const rect = canvas.getBoundingClientRect();
+        const touch = e.touches[0];
+        mouse.x = touch.clientX - rect.left;
+        mouse.y = touch.clientY - rect.top;
+      }
+    };
+
+    const handleTouchEnd = () => {
+      lastTouchTime = Date.now();
+      isTouching = false;
+      // Move mouse off-screen when touch ends
+      mouse.x = -1000;
+      mouse.y = -1000;
     };
 
     const handleScroll = () => {
@@ -150,6 +183,9 @@ const DataFlowBackground = () => {
 
     window.addEventListener("resize", resizeCanvas);
     window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("touchstart", handleTouchStart);
+    window.addEventListener("touchmove", handleTouchMove);
+    window.addEventListener("touchend", handleTouchEnd);
     window.addEventListener("scroll", handleScroll);
 
     init();
@@ -158,6 +194,9 @@ const DataFlowBackground = () => {
     return () => {
       window.removeEventListener("resize", resizeCanvas);
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("touchend", handleTouchEnd);
       window.removeEventListener("scroll", handleScroll);
       cancelAnimationFrame(animationFrameId);
     };
