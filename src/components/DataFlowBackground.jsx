@@ -26,7 +26,7 @@ const DataFlowBackground = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
       // Reduce force on smaller screens (mobile)
-      forceMultiplier = window.innerWidth < 768 ? 0.4 : 1;
+      forceMultiplier = window.innerWidth < 768 ? 0.7 : 1;
     };
 
     class Particle {
@@ -78,8 +78,16 @@ const DataFlowBackground = () => {
         // Wrap around screen
         if (this.x < 0) this.x = canvas.width;
         if (this.x > canvas.width) this.x = 0;
-        if (this.y < 0) this.y = canvas.height;
-        if (this.y > canvas.height) this.y = 0;
+
+        // Teleport with randomization on vertical scroll wrap
+        if (this.y < 0) {
+          this.y = canvas.height + Math.random() * 20;
+          this.x = Math.random() * canvas.width;
+        }
+        if (this.y > canvas.height) {
+          this.y = -Math.random() * 20;
+          this.x = Math.random() * canvas.width;
+        }
       }
 
       draw() {
