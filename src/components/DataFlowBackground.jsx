@@ -13,6 +13,7 @@ const DataFlowBackground = () => {
     let scrollSpeed = 0;
     let isTouching = false; // Track if user is actively touching
     let lastTouchTime = 0; // Track last touch time to ignore emulated mouse events
+    let forceMultiplier = 1; // Adjust force based on device/screen size
 
     // Configuration
     const particleDensity = 0.06; // Particles per pixel width
@@ -24,6 +25,8 @@ const DataFlowBackground = () => {
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
+      // Reduce force on smaller screens (mobile)
+      forceMultiplier = window.innerWidth < 768 ? 0.4 : 1;
     };
 
     class Particle {
@@ -51,8 +54,8 @@ const DataFlowBackground = () => {
 
         if (distance < maxDistance && isTouching) {
           // Attract towards mouse/touch (Data Query effect)
-          this.vx += forceDirectionX * force * 0.5;
-          this.vy += forceDirectionY * force * 0.5;
+          this.vx += forceDirectionX * force * 0.5 * forceMultiplier;
+          this.vy += forceDirectionY * force * 0.5 * forceMultiplier;
         }
 
         // Scroll effect (Speed up vertically)
