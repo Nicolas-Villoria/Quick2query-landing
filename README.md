@@ -1,6 +1,6 @@
-# Quick2query Landing Page 🚀
+# Quick2Query Landing Page 🚀
 
-A modern, responsive landing page for Quick2query - the cutting-edge Natural Language to SQL API platform that transforms plain English into optimized database queries.
+A modern, responsive landing page for Quick2Query - the cutting-edge Natural Language to SQL API platform that transforms plain English into optimized database queries.
 
 ## ✨ Features
 
@@ -199,7 +199,7 @@ If you encounter lockfile issues during Cloudflare deployment, the project inclu
 
 ## 📄 License
 
-This project is part of the Quick2query platform and is licensed under the MIT License.
+This project is part of the Quick2Query platform and is licensed under the MIT License.
 
 ## 🤝 Contributing
 
