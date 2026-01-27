@@ -1,8 +1,8 @@
-# Quick2Query Landing Page 🚀
+# Quick2Query Landing Page 
 
-A modern, responsive landing page for Quick2Query - the cutting-edge Natural Language to SQL API platform that transforms plain English into optimized database queries.
+A modern, responsive landing page for Quick2Query, the cutting-edge Natural Language to SQL API platform that transforms plain English into optimized database queries.
 
-## ✨ Features
+## Features
 
 - **Modern Tech Interface**: Clean, professional tech-focused design with code syntax highlighting
 - **Interactive Demo**: Live API playground with real-time query transformation
@@ -10,7 +10,7 @@ A modern, responsive landing page for Quick2Query - the cutting-edge Natural Lan
 - **Fast Performance**: Built with Astro for lightning-fast page loads
 - **Video Showcase**: Interactive video demonstrations with expandable view
 
-## 🏗️ Tech Stack
+## Tech Stack
 
 - **Framework**: Astro with static site generation
 - **Styling**: TailwindCSS for modern, responsive design
@@ -19,7 +19,7 @@ A modern, responsive landing page for Quick2Query - the cutting-edge Natural Lan
 - **Animations**: GSAP for smooth transitions and interactions
 - **Deployment**: Optimized for Cloudflare Pages with proper asset handling
 
-## 🚀 Project Structure
+## Project Structure
 
 ```text
 /
@@ -31,6 +31,7 @@ A modern, responsive landing page for Quick2Query - the cutting-edge Natural Lan
 │   │   ├── astro.svg
 │   │   └── background.svg
 │   ├── components/
+|   |   ├── Contact.astro
 │   │   ├── CTA.astro
 │   │   ├── FAQ.astro
 │   │   ├── Features.astro
@@ -38,6 +39,9 @@ A modern, responsive landing page for Quick2Query - the cutting-edge Natural Lan
 │   │   ├── Header.astro
 │   │   ├── Hero.astro
 │   │   ├── HeroSection.jsx (React)
+|   │   ├── DataFlowBackground.jsx (React)
+│   │   ├── BackgroundGradient.jsx (React)
+|   │   ├── SEOHead.astro
 │   │   ├── Pricing.astro
 │   │   └── Testimonials.astro
 │   ├── layouts/
@@ -47,17 +51,21 @@ A modern, responsive landing page for Quick2Query - the cutting-edge Natural Lan
 │   │   ├── features.astro
 │   │   ├── pricing.astro
 │   │   ├── story.astro
+│   │   ├── privacy.astro
+│   │   ├── terms.astro
 │   │   ├── contact.astro
-│   │   └── signin.astro
+│   │   └── signup.astro
 │   └── styles/
 │       ├── global.css
 │       ├── animations.css
+|       ├── typography.css
+|       ├── variables.css
 │       ├── buttons.css
 │       └── faq.css
 └── package.json
 ```
 
-## � Pages Overview
+## Pages Overview
 
 - **Homepage** (`/`): Hero section showcasing natural language to SQL transformation
 - **Features** (`/features`): Comprehensive overview of AI query capabilities and database support
@@ -67,7 +75,7 @@ A modern, responsive landing page for Quick2Query - the cutting-edge Natural Lan
 - **Documentation** (`/docs`): Detailed API documentation and guides
 - **Sign In** (`/signin`): API dashboard access
 
-## 🧞 Commands
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -80,7 +88,7 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm astro ...`          | Run CLI commands like `astro add`, `astro check`|
 | `pnpm astro -- --help`    | Get help using the Astro CLI                    |
 
-## 🚀 Getting Started
+## Getting Started
 
 1. **Clone the repository**
    ```sh
@@ -101,7 +109,7 @@ All commands are run from the root of the project, from a terminal:
 4. **Open your browser**
    Navigate to `http://localhost:4321` to see the site
 
-## 🎨 Brand Identity
+## Brand Identity
 
 - **Primary Color**: `#00B3A4` - Modern tech teal
 - **Accent Color**: `#00E0E0` - Electric blue
@@ -111,7 +119,7 @@ All commands are run from the root of the project, from a terminal:
   - Headers: Roboto (Clean, modern)
   - Body: Inter (Highly readable)
 
-## 💻 Development Notes
+## Development Notes
 
 ### Video Integration
 The site features an interactive video demo. Make sure the video file (`prototype_v2.mp4`) is placed in the `public` directory. The video player includes:
@@ -134,7 +142,7 @@ The documentation section uses:
 - Real-time query transformation demos
 - Response visualization tools
 
-## 🌐 Deployment
+## Deployment
 
 This project is configured for deployment on multiple platforms:
 
@@ -152,7 +160,7 @@ This project is configured for deployment on multiple platforms:
 - Build command: `pnpm build`
 - Output directory: `dist`
 
-## 🎨 Key Components
+## Key Components
 
 ### HeroSection.jsx (React)
 Reusable React component for hero sections across pages with:
@@ -169,13 +177,13 @@ Reusable React component for hero sections across pages with:
 - **Insurance Verification**: Real-time insurance checking
 - **Analytics Dashboard**: Insights and reporting tools
 
-## 🔧 Configuration
+## Configuration
 
 - **Astro Config**: `astro.config.mjs` - Includes Tailwind and React integrations
 - **Tailwind Config**: `tailwind.config.mjs` - Custom content paths and configurations
 - **TypeScript**: `tsconfig.json` - Type checking configuration
 
-## 📱 Responsive Design
+## Responsive Design
 
 The site is fully responsive with breakpoints optimized for:
 - Mobile devices (320px+)
@@ -183,28 +191,24 @@ The site is fully responsive with breakpoints optimized for:
 - Desktop (1024px+)
 - Large screens (1280px+)
 
-## 🎯 SEO & Performance
+## SEO & Performance
 
 - Static site generation for optimal performance
 - Semantic HTML structure
 - Optimized images and assets
 - Fast loading times with Astro's zero-JS by default
 
-## 🔧 Cloudflare Deployment Fix
+## Cloudflare Deployment Fix
 
 If you encounter lockfile issues during Cloudflare deployment, the project includes:
 - Updated `pnpm-lock.yaml` compatible with all dependencies
 - Proper build configuration for static site generation
 - Optimized for Cloudflare Pages automatic deployments
 
-## 📄 License
+## License
 
 This project is part of the Quick2Query platform and is licensed under the MIT License.
 
-## 🤝 Contributing
-
+## Contributing
 For contributions and feature requests, please contact the development team.
 
----
-
-Built with ❤️ for healthcare providers who deserve better scheduling solutions.
